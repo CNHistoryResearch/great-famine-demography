@@ -1,0 +1,131 @@
+# When enough has accumulated (pipeline/config.yaml), run a deep-research cycle with Claude and open a
+# pull request containing the next report version (English + Chinese). Humans review and merge.
+#
+# Safety: the agent may only edit research/, reports/, data/ and questions/ (Edit rules), may run only the
+# listed commands, and never sees the repository token (persist-credentials: false). Any change it makes to
+# code (pipeline/, models/*.py, schemas/, .github/) is reverted before the checks run.
+# Scheduled runs are off until the repository variable RESEARCH_CYCLE_SCHEDULE is set to "enabled".
+name: Research cycle
+on:
+  schedule:
+    - cron: "41 3 1 * *"   # monthly check, 1st of the month 03:41 UTC
+  workflow_dispatch:
+    inputs:
+      force: {description: "Run even if thresholds are not met", type: boolean, default: false}
+      bump: {description: "Version bump", type: choice, options: [minor, major], default: minor}
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+concurrency: {group: research-cycle, cancel-in-progress: false}
+jobs:
+  cycle:
+    if: github.event_name == 'workflow_dispatch' || vars.RESEARCH_CYCLE_SCHEDULE == 'enabled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - name: Skip if a report draft is already under review
+        id: busy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh pr list --repo "$GITHUB_REPOSITORY" --label report:draft --state open --json number -q 'length')
+          echo "busy=$([ "${n:-0}" -gt 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          [ "${n:-0}" -gt 0 ] && echo "::notice::A report:draft PR is open; finish reviewing it first." || true
+      - uses: actions/setup-python@v5
+        if: steps.busy.outputs.busy == 'false'
+        with: {python-version: "3.12", cache: pip}
+      - if: steps.busy.outputs.busy == 'false'
+        run: pip install -r requirements.txt
+      - name: Reconcile first so the packet is current
+        if: steps.busy.outputs.busy == 'false'
+        run: python -m pipeline.reconcile --since "$(ls -d reports/v*/ | sort -V | tail -1 | xargs basename)"
+      - name: Is a cycle due?
+        id: due
+        if: steps.busy.outputs.busy == 'false'
+        run: |
+          args="--check --bump ${{ inputs.bump || 'minor' }}"
+          if [ "${{ inputs.force }}" = "true" ]; then args="$args --force"; fi
+          python -m pipeline.research_packet $args
+      - name: Write research packet
+        if: steps.due.outputs.due == 'true'
+        run: |
+          args="--write --bump ${{ inputs.bump || 'minor' }}"
+          if [ "${{ inputs.force }}" = "true" ]; then args="$args --force"; fi
+          python -m pipeline.research_packet $args
+          echo "CURRENT=$(ls -d reports/v*/ | sort -V | tail -1 | xargs basename)" >> "$GITHUB_ENV"
+          echo "NEXT=${{ steps.due.outputs.next }}" >> "$GITHUB_ENV"
+      - name: Deep research and report drafting (Claude)
+        if: steps.due.outputs.due == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ github.token }}
+          prompt: |
+            Follow pipeline/prompts/research_cycle.md exactly.
+            CURRENT = ${{ env.CURRENT }}
+            NEXT = ${{ env.NEXT }}
+            Replace {CURRENT} and {NEXT} in those instructions with these values.
+            Do not commit, push or open pull requests yourself; leave all changes in the working tree.
+          claude_args: |
+            --model ${{ vars.CLAUDE_MODEL || 'claude-opus-5-5' }}
+            --max-turns ${{ vars.CLAUDE_MAX_TURNS || '400' }}
+            --allowedTools "Read,Glob,Grep,WebSearch,WebFetch,Edit(./research/**),Edit(./reports/**),Edit(./data/**),Edit(./questions/**),Bash(python -m pipeline.validate),Bash(python -m pipeline.check_cycle *),Bash(python -m pipeline.reconcile *),Bash(python -m pipeline.check_model),Bash(python models/national/famine_model.py),Bash(python models/national/charts_and_mc.py),Bash(ls *),Bash(mkdir -p *)"
+            --disallowedTools "Edit(./pipeline/**),Edit(./.github/**),Edit(./schemas/**),Edit(./models/**/*.py),Edit(./.git/**)"
+      - name: Revert any code changes and copy regenerated figures
+        if: steps.due.outputs.due == 'true'
+        run: |
+          git checkout -- pipeline schemas .github models/national/*.py models/cohort/*.py requirements.txt
+          git clean -fdq pipeline schemas .github
+          mkdir -p "reports/$NEXT/figures"
+          cp -n models/national/charts/*.png "reports/$NEXT/figures/" 2>/dev/null || true
+      - name: Check the cycle output
+        if: steps.due.outputs.due == 'true'
+        id: check
+        continue-on-error: true
+        run: |
+          set +e
+          python -m pipeline.validate > check.txt 2>&1; v=$?
+          python -m pipeline.check_cycle "$NEXT" >> check.txt 2>&1; c=$?
+          cat check.txt
+          [ $v -eq 0 ] && [ $c -eq 0 ]
+      - name: Build PDFs and page images
+        if: steps.due.outputs.due == 'true'
+        continue-on-error: true
+        run: |
+          sudo apt-get update && sudo apt-get install -y pandoc poppler-utils fonts-noto-cjk
+          python -m playwright install --with-deps chromium
+          python -m pipeline.build_report "$NEXT" --images
+      - name: Open the report pull request
+        if: steps.due.outputs.due == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.BOT_TOKEN || github.token }}
+          branch: report/${{ env.NEXT }}
+          add-paths: |
+            research/**
+            reports/**
+            data/**
+            questions/questions.yaml
+            models/national/results/**
+            models/national/charts/**
+          commit-message: "Draft report ${{ env.NEXT }} (automated research cycle)"
+          title: "Report ${{ env.NEXT }} (draft from automated research cycle)"
+          labels: "report:draft"
+          draft: ${{ steps.check.outcome != 'success' }}
+          body: |
+            Automated research cycle for **${{ env.NEXT }}**. Packet: `research/${{ env.NEXT }}/packet.md`.
+            What changed and why: `reports/${{ env.NEXT }}/CHANGES.md`.
+
+            Output checks: **${{ steps.check.outcome }}** (see the workflow log; this PR is a draft if they failed).
+
+            Review checklist (GOVERNANCE.md):
+            - [ ] Every number in the diff traced to a source or to model output
+            - [ ] Headline change (if any) explained in CHANGES.md; 2 approvals required
+            - [ ] Chinese translation complete and faithful
+            - [ ] Testimony handled per docs/testimony-policy.md
+            - [ ] Questions answered are marked in questions/questions.yaml
+            - [ ] "Flagged submissions" in CHANGES.md reviewed (possible prompt injection)

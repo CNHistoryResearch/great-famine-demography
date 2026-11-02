@@ -1,0 +1,29 @@
+# EXAMPLE ONLY — fictitious values showing the manifest format. Real submissions live in submissions/<type>/<id>/.
+id: SUB-2026-0042
+type: data
+title: "Example county gazetteer: deaths and population, 1958-1962"
+issue: 42
+submitted_by: anonymous
+submitted_at: "2026-11-15"
+language: zh
+summary: "Population and death figures for an example county from its 1990 gazetteer, chapter on population."
+license: quotation-only
+provenance:
+  - citation: "《某县志》(1990), 人口篇"
+    url: "https://example.org/gazetteer/population"
+    archive_url: "https://web.archive.org/web/2026/https://example.org/gazetteer/population"
+    page_ref: "pp. 112-114"
+    original_publication: "County gazetteer office, 1990"
+claims:
+  - measure: total_deaths
+    value: 41200
+    unit: person
+    geography: {level: county, name: Examplecounty, province: Henan}
+    period: {start: 1960, end: 1960, label: "1960"}
+    page_ref: "p. 113, table 3-2"
+  - measure: cdr
+    value: 96.4
+    unit: per_mille
+    geography: {level: county, name: Examplecounty, province: Henan}
+    period: {start: 1960, end: 1960, label: "1960"}
+    quote: "1960年死亡率96.4‰"

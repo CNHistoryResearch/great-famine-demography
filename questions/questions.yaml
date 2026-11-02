@@ -1,0 +1,85 @@
+# Reader questions registry.
+# Lifecycle: submitted (issue) -> triaged (auto) -> accepted | duplicate | out_of_scope | needs_clarification
+#            accepted -> answered (in report vX.Y) | deferred (needs data we do not have)
+# Only `accepted` questions are fed to the research cycle. Answered questions keep a pointer to the report section.
+schema_version: 1
+questions:
+  - id: Q-0001
+    text_en: "What was the actual death toll of the 1959-61 famine, estimated from original census data with population models?"
+    text_zh: "根据原始人口普查数据和人口模型，1959–61年大饥荒的实际死亡人数是多少？"
+    status: answered
+    answered_in: v1.0
+    section: "National estimate"
+  - id: Q-0002
+    text_en: "Is the Zhihu answer by chenqin (2012) correct, claim by claim?"
+    text_zh: "知乎chenqin（2012）的回答逐条看是否正确？"
+    status: answered
+    answered_in: v1.0
+    section: "The Zhihu answer"
+  - id: Q-0003
+    text_en: "How did fatality differ between high- and low-mortality regions, and between rural and urban areas?"
+    text_zh: "高死亡率与低死亡率地区之间、城乡之间的死亡差异如何？"
+    status: answered
+    answered_in: v1.0
+    section: "Regions"
+  - id: Q-0004
+    text_en: "Which age groups and sexes were most and least resilient?"
+    text_zh: "哪些年龄组和性别最抗饿、最不抗饿？"
+    status: answered
+    answered_in: v1.0
+    section: "Who died"
+  - id: Q-0005
+    text_en: "How did the death-toll numbers first leak, and how were they contested until today's accepted range?"
+    text_zh: "死亡数字最初如何泄露，又如何被争论直到形成今天公认的范围？"
+    status: answered
+    answered_in: v1.0
+    section: "How the numbers leaked and were contested"
+  - id: Q-0006
+    text_en: "The census data has obvious defects: end-1960 population is exactly 10 million below end-1959. Does that invalidate the estimates?"
+    text_zh: "人口数据有明显缺陷：1960年末人口恰好比1959年末少1000万，这是否使估计失效？"
+    status: answered
+    answered_in: v1.0
+    section: "Three common objections, answered / 1"
+  - id: Q-0007
+    text_en: "Why was there substantial population growth in 1962?"
+    text_zh: "为什么1962年人口大幅增长？"
+    status: answered
+    answered_in: v1.0
+    section: "Three common objections, answered / 2"
+  - id: Q-0008
+    text_en: "How much of the 'excess deaths' is actually people not born because of low fertility and malnutrition?"
+    text_zh: "所谓超额死亡中，有多少其实是因营养不良和生育意愿低而未出生的人？"
+    status: answered
+    answered_in: v1.0
+    section: "Three common objections, answered / 3"
+  # ---- open research backlog carried over from v1.0 "What we could not verify" ----
+  - id: Q-0009
+    text_en: "What are the unrounded 1959 and 1960 household-register totals (公安部三局户政处), and was the 1960 figure estimated?"
+    text_zh: "1959、1960年公安部户籍统计的未取整原始数是多少？1960年数字是否经过估算？"
+    status: accepted
+    priority: high
+  - id: Q-0010
+    text_en: "Is there independent evidence on the relative completeness of the 1953 and 1964 censuses (post-enumeration checks, provincial reports)?"
+    text_zh: "有没有关于1953年与1964年普查相对完整程度的独立证据（事后质量抽查、分省报告）？"
+    status: accepted
+    priority: high
+  - id: Q-0011
+    text_en: "What does Peng Xizhe's 1987 provincial table show, and how does it compare with Cao Shuji 2005 by province?"
+    text_zh: "彭希哲1987年分省表的内容是什么，与曹树基2005年的分省数字相比如何？"
+    status: accepted
+    priority: medium
+  - id: Q-0012
+    text_en: "Which official 1957 and 1963 life tables give male q40 of 5.47‰ and 3.42‰, and how were they constructed?"
+    text_zh: "哪份官方1957年、1963年生命表给出40岁男性死亡概率5.47‰和3.42‰？如何编制？"
+    status: accepted
+    priority: low
+  - id: Q-0013
+    text_en: "Guizhou's 1960 death rate: 52.33‰ or 45.4‰? Which source is primary?"
+    text_zh: "贵州1960年死亡率是52.33‰还是45.4‰？哪个是原始来源？"
+    status: accepted
+    priority: medium
+  - id: Q-0014
+    text_en: "What is the documentary basis of Chen Yizi's 43-46 million figure, and when was it first published in writing?"
+    text_zh: "陈一谘4300–4600万数字的文献依据是什么？最早何时见诸文字？"
+    status: accepted
+    priority: low

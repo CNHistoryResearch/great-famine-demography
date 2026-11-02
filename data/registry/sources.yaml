@@ -1,0 +1,485 @@
+# Auto-seeded from v1.0 report links (pipeline/tools/seed_registry_v1.py); grades are a first pass by domain
+# A=official/primary statistical or archival, B=peer-reviewed or research institution, C=secondary/repost/journalism, D=user-generated or unverified
+schema_version: 1
+sources:
+- id: SRC-EE8E6D5A
+  title: table of contents
+  url: http://marxism.cass.cn/qkynj/mkszyyj/201109/t20110922_1973063.shtml
+  kind: official_journal_toc
+  grade: A
+  first_cited_in: v1.0
+  archive_record: ARC-SUN-2011
+- id: SRC-F58E75E7
+  title: 大饥荒档案 provincial excess table
+  url: http://www.yhcw.net/famine/Data/ExDeath01.html
+  kind: mirror
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-B0A04910
+  title: SSB provincial death rates (mirror)
+  url: http://www.yhcw.net/famine/Research/fmtab123.htm
+  kind: mirror
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-B53207C9
+  title: Kung & Chen, APSR 2011
+  url: https://Www.Gwern.net/doc/sociology/abandoned-footnotes/2011-kung.pdf
+  kind: peer_reviewed_copy
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-1F279447
+  title: ADST oral histories
+  url: https://adst.org/2015/06/the-esoteric-art-of-china-watching-during-the-great-leap-forward/
+  kind: oral_history
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-FBE1B9E2
+  title: Mu & Zhang, IFPRI DP760
+  url: https://ageconsearch.umn.edu/record/42331/files/ifpridp00760.pdf
+  kind: working_paper
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-CDC941D5
+  title: IHSN
+  url: https://catalog.ihsn.org/citations/46705
+  kind: catalog
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-3A892BD5
+  title: CDT River Crab Archive 2013
+  url: https://chinadigitaltimes.net/2013/06/river-crab-archive-the-death-toll-from-maos-great-famine/
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-89DA86B9
+  title: 中国数字时代
+  url: https://chinadigitaltimes.net/2016/07/liberal-journal-yanhuang-chunqiu-says-will-end-publication/
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-2FDCE9BE
+  title: Yang Jisheng, 2010 lecture
+  url: https://chinadigitaltimes.net/chinese/128188.html
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-049A7D87
+  title: 中国数字时代
+  url: https://chinadigitaltimes.net/chinese/162450.html
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-B49B0724
+  title: VOA via CDT
+  url: https://chinadigitaltimes.net/chinese/166472.html
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-18266E78
+  title: provincial table
+  url: https://chinadigitaltimes.net/chinese/215281.html
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-DBCF98BE
+  title: CDT on Lin Zhibo, 2012
+  url: https://chinadigitaltimes.net/chinese/223180.html
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-0E3FB0E3
+  title: 刘放 review
+  url: https://chinadigitaltimes.net/chinese/238625.html
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-4C489C81
+  title: Yang's rebuttal of Sun
+  url: https://chinadigitaltimes.net/chinese/252335.html
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-4137589B
+  title: CDT mirror
+  url: https://chinadigitaltimes.net/chinese/363046.html
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-5D5ED60F
+  title: Yang lecture on hotspots
+  url: https://chinadigitaltimes.net/chinese/?p=103671
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-5B016F48
+  title: 中国数字时代
+  url: https://chinadigitaltimes.net/chinese/?p=110963
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-E710E263
+  title: via CDT
+  url: https://chinadigitaltimes.net/chinese/?p=165596
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-0C31F766
+  title: 中国数字时代
+  url: https://chinadigitaltimes.net/chinese/?p=326690
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-502262F6
+  title: 中国数字时代
+  url: https://chinadigitaltimes.net/chinese/?p=552797
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-A0EFED4C
+  title: 中国数字时代
+  url: https://chinadigitaltimes.net/chinese/?p=553044
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-A54B8DB4
+  title: Cao Shuji 2005 (CDT repost)
+  url: https://chinadigitaltimes.net/chinese/?p=98017
+  kind: journalism_or_repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-C49646E9
+  title: NYT Chinese
+  url: https://cn.nytimes.com/china/20120917/cc17yangpreface/
+  kind: journalism
+  grade: C
+  first_cited_in: v1.0
+  archive_record: ARC-NYT-YANG-2012
+- id: SRC-A2832C85
+  title: Wilson Center
+  url: https://digitalarchive.wilsoncenter.org/document/117703
+  kind: archival_document
+  grade: A
+  first_cited_in: v1.0
+- id: SRC-8A0DFDA4
+  title: Hill 1988, *Demographic Trends in China from 1950 to 1982*, World Bank
+  url: https://documents1.worldbank.org/curated/en/492811468771874832/pdf/Demographic-Trends-in-China-from-1950-to-1982.pdf
+  kind: research_report
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-7472C5B3
+  title: Meng, Qian & Yared
+  url: https://eml.berkeley.edu/~webfac/bardhan/qian.pdf
+  kind: peer_reviewed_copy
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-A38960E1
+  title: ENN/Smil
+  url: https://ennonline.net/fex/10/china
+  kind: journalism
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-68AA4F0C
+  title: UN WPP2022 R package
+  url: https://github.com/PPgp/wpp2022
+  kind: dataset
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-E2CEC994
+  title: WPP2024
+  url: https://github.com/PPgp/wpp2024
+  kind: dataset
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-C1BA8BF3
+  title: Global Voices 2013
+  url: https://globalvoices.org/2013/09/07/dont-say-millions-starved-during-chinas-great-famine-try-nutritional-death-instead/
+  kind: journalism
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-F469481E
+  title: Lin & Yang 2000, *Economic Journal*
+  url: https://gwern.net/doc/sociology/2000-lin.pdf
+  kind: peer_reviewed_copy
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-8DB3C923
+  title: FRUS SNIE 13-61
+  url: https://history.state.gov/historicaldocuments/frus1961-63v22/d17
+  kind: government_archive
+  grade: A
+  first_cited_in: v1.0
+- id: SRC-58C1AF07
+  title: Text
+  url: https://id.china-embassy.gov.cn/ztbd/jrzg/202111/t20211118_10450069.htm
+  kind: official_document
+  grade: A
+  first_cited_in: v1.0
+- id: SRC-3DA11515
+  title: Mi, Yang & Jia, IUSSP paper
+  url: https://iussp.org/sites/default/files/event_call_for_papers/A%20study%20of%20population%20change%20led%20by%20China%E2%80%99s%20great%20famine_.pdf
+  kind: conference_paper
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-2F7F67BC
+  title: 学习公社 on the 1960 figure
+  url: https://library.ttcdw.com/libary/wenhuakejisuyang/zx/2017-05-10/134417.html
+  kind: repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-632E65B6
+  title: Yang Songlin (Springer)
+  url: https://link.springer.com/chapter/10.1007/978-981-16-1661-7_7
+  kind: book_chapter
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-CFE0B2A7
+  title: MCLC
+  url: https://lists.osu.edu/pipermail/mclc/2013-October/002361.html
+  kind: mailing_list
+  grade: D
+  first_cited_in: v1.0
+- id: SRC-60913FC7
+  title: minjian-danganguan
+  url: https://minjian-danganguan.org/archive/466
+  kind: archive_mirror
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-7690FEFF
+  title: Jiangsu
+  url: https://population.gotohui.com/show-84758
+  kind: data_aggregator
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-A11EF50C
+  title: Shanghai
+  url: https://population.gotohui.com/show-84821
+  kind: data_aggregator
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-D24AAF10
+  title: 《人口研究》2016
+  url: https://rkyj.ruc.edu.cn/CN/Y2016/V40/I1/22
+  kind: peer_reviewed
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-3ECD702D
+  title: 《人口研究》2017
+  url: https://rkyj.ruc.edu.cn/CN/Y2017/V41/I2/97
+  kind: peer_reviewed
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-BEDEDC8D
+  title: Sun 2016, CCPS
+  url: https://rpb115.nsysu.edu.tw/var/file/131/1131/img/2375/CCPS2(1
+  kind: journal_article
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-CA53B2D2
+  title: Zhao & Reimondos 2012, *Population*
+  url: https://shs.cairn.info/article/E_POPU_1202_0329?lang=en
+  kind: peer_reviewed
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-24AF3900
+  title: May 2002
+  url: https://web.archive.org/web/20020510123938/http://chinafamine.org:80/famine/Data/ExDeath01.html
+  kind: archive_snapshot
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-3C885FBA
+  title: chinafamine.org, Oct 2002
+  url: https://web.archive.org/web/20021005100231/http://www.chinafamine.org:80/famine/Research/r020901a.htm
+  kind: archive_snapshot
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-FDCE5EC1
+  title: chinafamine.org, Oct 2002
+  url: https://web.archive.org/web/20021019224201/http://www.chinafamine.org:80/famine/Research/fmtab123.htm
+  kind: archive_snapshot
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-8DA16767
+  title: profile on 2 May 2012
+  url: https://web.archive.org/web/20120502045608/http://weibo.com:80/linzhibo
+  kind: archive_snapshot
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-2266E74D
+  title: Wayback, 3 May 2012
+  url: https://web.archive.org/web/20120503050513/http://www.zhihu.com:80/question/20207577/answer/14334544
+  kind: user_post
+  grade: D
+  first_cited_in: v1.0
+- id: SRC-EB3C4FD9
+  title: Full-text PDF, Wayback 18 Sep 2012
+  url: https://web.archive.org/web/20120918072600/http://cn.nytimes.com/article/china/2012/09/17/cc17yangpreface/cc17yangpreface.pdf
+  kind: archive_snapshot
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-8E5E7658
+  title: 13 May 2013
+  url: https://web.archive.org/web/20130513154728/http://www.zhihu.com/question/20207577/answer/14334544
+  kind: user_post
+  grade: D
+  first_cited_in: v1.0
+- id: SRC-BDC50A6D
+  title: FreeWeibo capture, Aug 2014
+  url: https://web.archive.org/web/20140811104752/https://freeweibo.com/weibo/3580144918951255
+  kind: archive_snapshot
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-C715DF33
+  title: Wayback 2014–17年
+  url: https://web.archive.org/web/20140928083325/http://www.yhcqw.com/html/zml/2014/99/1499152593JA8596114653IDEJEJH96AK.html
+  kind: archive_snapshot
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-DC3244F2
+  title: Full text, Wayback 3 Nov 2020
+  url: https://web.archive.org/web/20201103/http://www.yhcqw.com/71/9352.html
+  kind: archive_snapshot
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-B60590B2
+  title: Jin Hui 1993, 《三年自然灾害备忘录》
+  url: https://www.aisixiang.com/data/11995.html
+  kind: repost
+  grade: C
+  first_cited_in: v1.0
+  archive_record: ARC-JINHUI-1993
+- id: SRC-06218298
+  title: 陈子明 review of 《墓碑》
+  url: https://www.aisixiang.com/data/24241.html
+  kind: repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-6786E200
+  title: Sun Jingxian, 红旗文稿
+  url: https://www.aisixiang.com/data/71783.html
+  kind: repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-7DFF1FC8
+  title: aisixiang
+  url: https://www.aisixiang.com/data/82837.html
+  kind: repost
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-C7C09AC1
+  title: bannedbook.org original
+  url: https://www.bannedbook.org/books/famine/Research/fmtab123.htm
+  kind: mirror
+  grade: C
+  first_cited_in: v1.0
+  archive_record: ARC-FMTAB123
+- id: SRC-66B2E8F2
+  title: ChinaFile
+  url: https://www.chinafile.com/library/nyrb-china-archive/finding-facts-about-maos-victims
+  kind: journalism
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-C1C03067
+  title: chinanews
+  url: https://www.chinanews.com.cn/gn/2014/09-22/6614931.shtml
+  kind: state_media
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-84BC0218
+  title: Meng, Qian & Yared
+  url: https://www.kellogg.northwestern.edu/faculty/qian/resources/MPQY_FINAL.pdf
+  kind: peer_reviewed_copy
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-20C8BD36
+  title: Text
+  url: https://www.marxistarkiv.se/kina/engelska/on_cpc_history.pdf
+  kind: document_copy
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-525906C1
+  title: PDF, minjian-danganguan
+  url: https://www.minjian-danganguan.org/s/minjian-danganguan/item/458
+  kind: archive_mirror
+  grade: C
+  first_cited_in: v1.0
+  archive_record: ARC-TOMBSTONE
+- id: SRC-7DBC8CCF
+  title: NYRB 1983, "Starving to Death in China"
+  url: https://www.nybooks.com/articles/1983/06/16/starving-to-death-in-china/
+  kind: journalism
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-F3C21B7A
+  title: AP 1984 via SAILDART
+  url: https://www.saildart.org/FAMINE.NS%5BE84,JMC%5D
+  kind: wire_copy
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-5D3BAD01
+  title: NBS reply on pre-1982 data sources (2024)
+  url: https://www.stats.gov.cn/hd/lyzx/zxgk/202407/t20240719_1955729.html
+  kind: official_statistics
+  grade: A
+  first_cited_in: v1.0
+- id: SRC-4674FA2B
+  title: NBS 2005 Table 4-4
+  url: https://www.stats.gov.cn/sj/ndsj/2005/html/D0404e.htm
+  kind: official_statistics
+  grade: A
+  first_cited_in: v1.0
+- id: SRC-6FD0B6C3
+  title: 1964 census communiqué
+  url: https://www.stats.gov.cn/sj/tjgb/rkpcgb/qgrkpcgb/202302/t20230206_1901987.html
+  kind: official_statistics
+  grade: A
+  first_cited_in: v1.0
+- id: SRC-47C9C3E1
+  title: NBS 1999 yearbook
+  url: https://www.stats.gov.cn/yearbook/1999/d02c.htm
+  kind: official_statistics
+  grade: A
+  first_cited_in: v1.0
+- id: SRC-DA3E99B4
+  title: Moscow Times reprint
+  url: https://www.themoscowtimes.com/archive/reports-tell-horror-of-maos-policies
+  kind: journalism
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-66994873
+  title: Ó Gráda 2011, "Great Leap into Famine"
+  url: https://www.ucd.ie/economics/t4media/WP11_03.pdf
+  kind: working_paper
+  grade: B
+  first_cited_in: v1.0
+- id: SRC-8ADB96B8
+  title: Sun Jingxian, 乌有之乡 2011
+  url: https://www.wyzxwk.com/Article/lishi/2011/12/271132.html
+  kind: opinion
+  grade: C
+  first_cited_in: v1.0
+- id: SRC-5B4EF4F5
+  title: question 20207577, answer 14334544
+  url: https://www.zhihu.com/question/20207577/answer/14334544
+  kind: user_post
+  grade: D
+  first_cited_in: v1.0
+  archive_record: ARC-ZHIHU-CHENQIN
+- id: SRC-F6FC0211
+  title: zh.wikipedia
+  url: https://zh.wikipedia.org/wiki/三年困难时期
+  kind: encyclopedia
+  grade: D
+  first_cited_in: v1.0
+- id: SRC-9199DD5D
+  title: Sun Jingxian, 知乎 repost
+  url: https://zhuanlan.zhihu.com/p/1973792853676279168
+  kind: user_post
+  grade: D
+  first_cited_in: v1.0
+- id: SRC-SSB-PROVINCIAL-CDR
+  title: SSB provincial death rates 1954-66 (人口统计资料汇编 1949-1985, 1988), Table 1
+  url: https://www.bannedbook.org/books/famine/Research/fmtab123.htm
+  kind: official_statistics_copy
+  grade: B
+  first_cited_in: v1.0
+  archive_record: ARC-FMTAB123

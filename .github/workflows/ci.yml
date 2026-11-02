@@ -1,0 +1,23 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - name: Validate registries, data and submissions (Gate 0)
+        run: python -m pipeline.validate
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Model reproduces the published headline
+        run: python -m pipeline.check_model
+      - name: Latest report is complete
+        run: python -m pipeline.check_cycle "$(ls -d reports/v*/ | sort -V | tail -1 | xargs basename)"

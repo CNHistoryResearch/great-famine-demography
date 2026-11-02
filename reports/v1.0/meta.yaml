@@ -1,0 +1,14 @@
+version: v1.0
+published: 2026-11-01
+headline:
+  excess_deaths_million: {central: 30.9, low: 22.0, high: 40.0, period: "mid-1958 to mid-1963"}
+  registered_floor_million: [14.4, 16.2]
+  lost_births_million: {gross: 35.8, net: 28.4}
+languages: [en, zh]
+files:
+  en: report_en.md
+  zh: report_zh.md
+  pdf_en: pdf/report_en.pdf
+  pdf_zh: pdf/report_zh.pdf
+questions_answered: [Q-0001, Q-0002, Q-0003, Q-0004, Q-0005, Q-0006, Q-0007, Q-0008]
+model: models/national/famine_model.py

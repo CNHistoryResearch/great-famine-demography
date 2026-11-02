@@ -1,0 +1,44 @@
+name: "Submit research (paper, estimate, reanalysis) / 提交研究"
+description: A published or new analysis — an estimate, a reconstruction, a critique of an existing estimate.
+title: "[Research] "
+labels: ["submission:research"]
+body:
+  - type: textarea
+    id: summary
+    attributes: {label: Summary / 摘要, description: "Main finding with its number, period and measure."}
+    validations: {required: true}
+  - type: textarea
+    id: method
+    attributes: {label: Method / 方法, description: "Data used, model, key assumptions (especially the 'normal' mortality baseline and census completeness)."}
+    validations: {required: true}
+  - type: input
+    id: code
+    attributes: {label: Code URL / 代码}
+  - type: input
+    id: data
+    attributes: {label: Data URL / 数据}
+  - type: input
+    id: doi
+    attributes: {label: DOI or publication / DOI 或发表处}
+  - type: checkboxes
+    id: reproducibility
+    attributes:
+      label: Reproducibility / 可重复性
+      options:
+        - label: "The result can be reproduced from the linked code and data / 可用所附代码和数据复现"
+        - label: "Peer-reviewed / 经同行评审"
+  - type: textarea
+    id: claims
+    attributes:
+      label: Claims / 数字
+      description: "One per line: `measure | value | unit | level | place | province | period | quote or page`."
+  - type: textarea
+    id: sources
+    attributes: {label: Sources / 来源, description: "`citation | URL | page`, one per line."}
+    validations: {required: true}
+  - type: dropdown
+    id: license
+    attributes:
+      label: License / 授权
+      options: ["Quotation only (we link, quote briefly) / 仅引用", "CC-BY-4.0", "CC0-1.0", "Public domain / 公有领域", "Unknown / 不清楚"]
+    validations: {required: true}

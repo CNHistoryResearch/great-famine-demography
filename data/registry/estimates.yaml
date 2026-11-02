@@ -1,0 +1,222 @@
+# Registry of published national estimates of excess deaths in the 1959-61 famine.
+# Each entry is reviewed against the original where possible; `verified` says how.
+# measure: excess_deaths = all deaths above a no-famine counterfactual (non-normal deaths, 非正常死亡)
+# Units: millions of persons. Period is as stated by the author.
+# method_class: registration | census_reconstruction | local_records | archival | hukou_accounting | model_ours
+schema_version: 1
+estimates:
+  - id: EST-OURS-V1
+    author: "This project (v1.0 model C)"
+    year: 2026
+    period: "mid-1958 to mid-1963"
+    measure: excess_deaths
+    central: 30.9
+    low: 22.0
+    high: 40.0
+    lost_births_gross: 35.8
+    lost_births_net: 28.4
+    method_class: model_ours
+    method: "Census-calibrated single-year two-sex cohort-component reconstruction, 1953->1964 censuses, births back-projected from 1982 census"
+    verified: reproducible  # rerun models/national/famine_model.py
+    sources: [models/national/results/summary.json]
+  - id: EST-OFFICIAL-REG
+    author: "Official registered rates (computed here)"
+    year: 2026
+    period: "1958-61"
+    measure: excess_deaths
+    central: 15.3
+    low: 14.4
+    high: 16.2
+    method_class: registration
+    method: "Registered CDR minus five alternative baselines x mid-year population"
+    verified: reproducible
+    note: "Floor: death registration ~60% complete over 1953-64"
+  - id: EST-UN-WPP2024
+    author: "UN World Population Prospects 2024 (computed here)"
+    year: 2024
+    period: "1958-61"
+    measure: excess_deaths
+    central: 15.7
+    low: 12.0
+    high: 18.2
+    method_class: census_reconstruction
+    method: "UN reconstruction; implicitly treats 1964 census as ~2.7% under-counted relative to 1953"
+    verified: reproducible
+    sources: ["https://github.com/PPgp/wpp2024"]
+  - id: EST-JIANG-1987
+    author: "Jiang Zhenghua 蒋正华 & Li Nan 李南"
+    year: 1987
+    period: "1958-63"
+    measure: excess_deaths
+    central: 17.0
+    low: 16.5
+    high: 17.9
+    method_class: census_reconstruction
+    method: "Life tables built on official rates (state-commissioned)"
+    verified: secondary
+    sources: ["https://chinadigitaltimes.net/chinese/363046.html"]
+  - id: EST-MI-JIA-2016
+    author: "Mi Hong 米红 & Jia Ning 贾宁"
+    year: 2016
+    period: "1958-61"
+    measure: excess_deaths
+    central: 19.8
+    low: 16.2
+    high: 23.4
+    method_class: census_reconstruction
+    method: "Modified Lee-Carter"
+    verified: abstract
+    sources: ["https://rkyj.ruc.edu.cn/CN/Y2016/V40/I1/22"]
+  - id: EST-LI-CHENGRUI-1997
+    author: "Li Chengrui 李成瑞"
+    year: 1997
+    period: "famine years"
+    measure: excess_deaths
+    central: 22.0
+    method_class: census_reconstruction
+    method: "Amended Coale; published in 中共党史研究 1997 no. 2"
+    verified: secondary
+  - id: EST-PENG-1987
+    author: "Peng Xizhe 彭希哲"
+    year: 1987
+    period: "1958-62"
+    measure: excess_deaths
+    central: 23.0
+    method_class: local_records
+    method: "Provincial records (Population and Development Review 13(4))"
+    verified: unverified
+  - id: EST-COALE-1984
+    author: "Ansley Coale"
+    year: 1984
+    period: "1958-63"
+    measure: excess_deaths
+    central: 26.8
+    alt: {period: "1959-61", central: 24.8}
+    lost_births_gross: 30.7
+    method_class: census_reconstruction
+    method: "Three censuses + 1982 fertility survey"
+    verified: secondary
+  - id: EST-CALOT-1985
+    author: "Gérard Calot"
+    year: 1985
+    period: "1958-62"
+    measure: excess_deaths
+    central: 28.5
+    lost_births_gross: 33.2
+    method_class: census_reconstruction
+    verified: secondary
+  - id: EST-LUO-1988
+    author: "Luo Sheng"
+    year: 1988
+    period: "1959-63"
+    measure: excess_deaths
+    central: 28.9
+    method_class: census_reconstruction
+    method: "Brass logit"
+    verified: secondary
+  - id: EST-BANISTER-1987
+    author: "Judith Banister"
+    year: 1987
+    period: "1958-61"
+    measure: excess_deaths
+    central: 29.9
+    lost_births_gross: 31.2
+    method_class: census_reconstruction
+    verified: secondary
+  - id: EST-ASHTON-1984
+    author: "Ashton, Hill, Piazza & Zeitz"
+    year: 1984
+    period: "1958-61"
+    measure: excess_deaths
+    central: 30.0
+    lost_births_gross: 33.0
+    method_class: census_reconstruction
+    method: "Censuses + 1982 survey births; intercensal survival"
+    verified: secondary
+    sources: ["https://catalog.ihsn.org/citations/46705", "https://documents1.worldbank.org/curated/en/492811468771874832/pdf/Demographic-Trends-in-China-from-1950-to-1982.pdf"]
+  - id: EST-CAO-2005
+    author: "Cao Shuji 曹树基"
+    year: 2005
+    period: "1959-61"
+    measure: excess_deaths
+    central: 32.5
+    method_class: local_records
+    method: "County gazetteers aggregated to Qing-era prefectures"
+    verified: secondary
+    sources: ["https://chinadigitaltimes.net/chinese/?p=98017"]
+  - id: EST-JINHUI-1993
+    author: "Jin Hui 金辉"
+    year: 1993
+    period: "1959-61"
+    measure: excess_deaths
+    central: 34.7
+    low: 27.9
+    high: 40.6
+    method_class: registration
+    method: "Balancing on published NBS series"
+    verified: primary
+    sources: ["https://www.aisixiang.com/data/11995.html"]
+  - id: EST-YANG-2008
+    author: "Yang Jisheng 杨继绳"
+    year: 2008
+    period: "1958-62"
+    measure: excess_deaths
+    central: 36.0
+    lost_births_gross: 40.0
+    method_class: archival
+    method: "Provincial archives + demographic studies + judgement"
+    verified: secondary
+  - id: EST-CHEN-YIZI-1994
+    author: "Chen Yizi 陈一谘"
+    year: 1994
+    period: "1959-61"
+    measure: excess_deaths
+    central: 43.0
+    high: 46.0
+    method_class: archival
+    method: "Attributed to an internal System Reform Institute study; documents never released"
+    verified: unverified
+  - id: EST-DIKOTTER-2010
+    author: "Frank Dikötter"
+    year: 2010
+    period: "1958-62"
+    measure: excess_deaths
+    central: 45.0
+    method_class: archival
+    method: "Cao Shuji + ~50% uplift from archival reports; implicit 10‰ baseline"
+    verified: secondary
+  - id: EST-SUN-2011
+    author: "Sun Jingxian 孙经先"
+    year: 2011
+    period: "1959-61"
+    measure: excess_deaths
+    central: 3.66
+    low: 2.5
+    method_class: hukou_accounting
+    method: "Household-register accounting; attributes register residual to migration double-counting"
+    verified: primary
+    sources: ["https://www.aisixiang.com/data/71783.html"]
+  - id: EST-YANG-SONGLIN-2013
+    author: "Yang Songlin 杨松林"
+    year: 2013
+    period: "1959-61"
+    measure: excess_deaths
+    central: 3.3
+    low: 2.6
+    high: 4.0
+    method_class: hukou_accounting
+    method: "Linear mortality-trend baselines"
+    verified: secondary
+    sources: ["https://link.springer.com/chapter/10.1007/978-981-16-1661-7_7"]
+  - id: EST-CHENG-ZHAN-2017
+    author: "Cheng Enfu 程恩富 & Zhan Zhihua 詹志华"
+    year: 2017
+    period: "1959-61"
+    measure: excess_deaths
+    central: 4.5
+    low: 4.0
+    high: 5.0
+    method_class: hukou_accounting
+    method: "Raised baseline for 1953-57 death under-reporting"
+    verified: abstract
+    sources: ["https://rkyj.ruc.edu.cn/CN/Y2017/V41/I2/97"]

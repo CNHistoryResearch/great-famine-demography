@@ -1,0 +1,3115 @@
+# Numeric claims registry used by pipeline/reconcile.py. Seeded from v1.0 (pipeline/tools/seed_registry_v1.py).
+schema_version: 1
+claims:
+- id: CLM-0001
+  measure: excess_deaths
+  value: 30.9
+  unit: million
+  low: 22.0
+  high: 40.0
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1963
+    label: mid-1958 to mid-1963
+  source: EST-OURS-V1
+  method_class: model_ours
+  status: registered
+  added_in: v1.0
+- id: CLM-0002
+  measure: excess_deaths
+  value: 15.3
+  unit: million
+  low: 14.4
+  high: 16.2
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-61
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0003
+  measure: excess_deaths
+  value: 15.7
+  unit: million
+  low: 12.0
+  high: 18.2
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-61
+  source: EST-UN-WPP2024
+  method_class: census_reconstruction
+  status: registered
+  added_in: v1.0
+- id: CLM-0004
+  measure: excess_deaths
+  value: 17.0
+  unit: million
+  low: 16.5
+  high: 17.9
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-63
+  source: EST-JIANG-1987
+  method_class: census_reconstruction
+  status: registered
+  added_in: v1.0
+- id: CLM-0005
+  measure: excess_deaths
+  value: 19.8
+  unit: million
+  low: 16.2
+  high: 23.4
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-61
+  source: EST-MI-JIA-2016
+  method_class: census_reconstruction
+  status: registered
+  added_in: v1.0
+- id: CLM-0006
+  measure: excess_deaths
+  value: 22.0
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: null
+    end: null
+    label: famine years
+  source: EST-LI-CHENGRUI-1997
+  method_class: census_reconstruction
+  status: registered
+  added_in: v1.0
+- id: CLM-0007
+  measure: excess_deaths
+  value: 23.0
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-62
+  source: EST-PENG-1987
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0008
+  measure: excess_deaths
+  value: 26.8
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-63
+  source: EST-COALE-1984
+  method_class: census_reconstruction
+  status: registered
+  added_in: v1.0
+- id: CLM-0009
+  measure: excess_deaths
+  value: 28.5
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-62
+  source: EST-CALOT-1985
+  method_class: census_reconstruction
+  status: registered
+  added_in: v1.0
+- id: CLM-0010
+  measure: excess_deaths
+  value: 28.9
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1959
+    end: 1959
+    label: 1959-63
+  source: EST-LUO-1988
+  method_class: census_reconstruction
+  status: registered
+  added_in: v1.0
+- id: CLM-0011
+  measure: excess_deaths
+  value: 29.9
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-61
+  source: EST-BANISTER-1987
+  method_class: census_reconstruction
+  status: registered
+  added_in: v1.0
+- id: CLM-0012
+  measure: excess_deaths
+  value: 30.0
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-61
+  source: EST-ASHTON-1984
+  method_class: census_reconstruction
+  status: registered
+  added_in: v1.0
+- id: CLM-0013
+  measure: excess_deaths
+  value: 32.5
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1959
+    end: 1959
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0014
+  measure: excess_deaths
+  value: 34.7
+  unit: million
+  low: 27.9
+  high: 40.6
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1959
+    end: 1959
+    label: 1959-61
+  source: EST-JINHUI-1993
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0015
+  measure: excess_deaths
+  value: 36.0
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-62
+  source: EST-YANG-2008
+  method_class: archival
+  status: registered
+  added_in: v1.0
+- id: CLM-0016
+  measure: excess_deaths
+  value: 43.0
+  unit: million
+  high: 46.0
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1959
+    end: 1959
+    label: 1959-61
+  source: EST-CHEN-YIZI-1994
+  method_class: archival
+  status: registered
+  added_in: v1.0
+- id: CLM-0017
+  measure: excess_deaths
+  value: 45.0
+  unit: million
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1958
+    end: 1958
+    label: 1958-62
+  source: EST-DIKOTTER-2010
+  method_class: archival
+  status: registered
+  added_in: v1.0
+- id: CLM-0018
+  measure: excess_deaths
+  value: 3.66
+  unit: million
+  low: 2.5
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1959
+    end: 1959
+    label: 1959-61
+  source: EST-SUN-2011
+  method_class: hukou_accounting
+  status: registered
+  added_in: v1.0
+- id: CLM-0019
+  measure: excess_deaths
+  value: 3.3
+  unit: million
+  low: 2.6
+  high: 4.0
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1959
+    end: 1959
+    label: 1959-61
+  source: EST-YANG-SONGLIN-2013
+  method_class: hukou_accounting
+  status: registered
+  added_in: v1.0
+- id: CLM-0020
+  measure: excess_deaths
+  value: 4.5
+  unit: million
+  low: 4.0
+  high: 5.0
+  geography:
+    level: national
+    name: China
+  period:
+    start: 1959
+    end: 1959
+    label: 1959-61
+  source: EST-CHENG-ZHAN-2017
+  method_class: hukou_accounting
+  status: registered
+  added_in: v1.0
+- id: CLM-0021
+  measure: cdr
+  value: 25.17
+  unit: per_mille
+  geography:
+    level: province
+    name: Sichuan
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0022
+  measure: cdr
+  value: 46.9
+  unit: per_mille
+  geography:
+    level: province
+    name: Sichuan
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0023
+  measure: cdr
+  value: 53.97
+  unit: per_mille
+  geography:
+    level: province
+    name: Sichuan
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0024
+  measure: cdr
+  value: 29.42
+  unit: per_mille
+  geography:
+    level: province
+    name: Sichuan
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0025
+  measure: cdr
+  value: 14.82
+  unit: per_mille
+  geography:
+    level: province
+    name: Sichuan
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0026
+  measure: excess_deaths
+  value: 9.4
+  unit: million
+  geography:
+    level: province
+    name: Sichuan
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0027
+  measure: excess_deaths
+  value: 7.73
+  unit: million
+  geography:
+    level: province
+    name: Sichuan
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0028
+  measure: cdr
+  value: 12.36
+  unit: per_mille
+  geography:
+    level: province
+    name: Anhui
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0029
+  measure: cdr
+  value: 16.72
+  unit: per_mille
+  geography:
+    level: province
+    name: Anhui
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0030
+  measure: cdr
+  value: 68.58
+  unit: per_mille
+  geography:
+    level: province
+    name: Anhui
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0031
+  measure: cdr
+  value: 8.11
+  unit: per_mille
+  geography:
+    level: province
+    name: Anhui
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0032
+  measure: cdr
+  value: 8.51
+  unit: per_mille
+  geography:
+    level: province
+    name: Anhui
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0033
+  measure: excess_deaths
+  value: 6.33
+  unit: million
+  geography:
+    level: province
+    name: Anhui
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0034
+  measure: excess_deaths
+  value: 2.09
+  unit: million
+  geography:
+    level: province
+    name: Anhui
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0035
+  measure: cdr
+  value: 12.69
+  unit: per_mille
+  geography:
+    level: province
+    name: Henan
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0036
+  measure: cdr
+  value: 14.1
+  unit: per_mille
+  geography:
+    level: province
+    name: Henan
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0037
+  measure: cdr
+  value: 39.65
+  unit: per_mille
+  geography:
+    level: province
+    name: Henan
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0038
+  measure: cdr
+  value: 10.2
+  unit: per_mille
+  geography:
+    level: province
+    name: Henan
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0039
+  measure: cdr
+  value: 8.04
+  unit: per_mille
+  geography:
+    level: province
+    name: Henan
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0040
+  measure: excess_deaths
+  value: 2.94
+  unit: million
+  geography:
+    level: province
+    name: Henan
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0041
+  measure: excess_deaths
+  value: 1.38
+  unit: million
+  geography:
+    level: province
+    name: Henan
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0042
+  measure: cdr
+  value: 12.77
+  unit: per_mille
+  geography:
+    level: province
+    name: Shandong
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0043
+  measure: cdr
+  value: 18.14
+  unit: per_mille
+  geography:
+    level: province
+    name: Shandong
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0044
+  measure: cdr
+  value: 23.51
+  unit: per_mille
+  geography:
+    level: province
+    name: Shandong
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0045
+  measure: cdr
+  value: 18.49
+  unit: per_mille
+  geography:
+    level: province
+    name: Shandong
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0046
+  measure: cdr
+  value: 12.35
+  unit: per_mille
+  geography:
+    level: province
+    name: Shandong
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0047
+  measure: excess_deaths
+  value: 1.81
+  unit: million
+  geography:
+    level: province
+    name: Shandong
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0048
+  measure: excess_deaths
+  value: 1.31
+  unit: million
+  geography:
+    level: province
+    name: Shandong
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0049
+  measure: cdr
+  value: 15.26
+  unit: per_mille
+  geography:
+    level: province
+    name: Guizhou
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0050
+  measure: cdr
+  value: 20.28
+  unit: per_mille
+  geography:
+    level: province
+    name: Guizhou
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0051
+  measure: cdr
+  value: 52.33
+  unit: per_mille
+  geography:
+    level: province
+    name: Guizhou
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0052
+  measure: cdr
+  value: 23.27
+  unit: per_mille
+  geography:
+    level: province
+    name: Guizhou
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0053
+  measure: cdr
+  value: 11.64
+  unit: per_mille
+  geography:
+    level: province
+    name: Guizhou
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0054
+  measure: excess_deaths
+  value: 1.75
+  unit: million
+  geography:
+    level: province
+    name: Guizhou
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0055
+  measure: excess_deaths
+  value: 1.02
+  unit: million
+  geography:
+    level: province
+    name: Guizhou
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0056
+  measure: cdr
+  value: 11.58
+  unit: per_mille
+  geography:
+    level: province
+    name: Hunan
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0057
+  measure: cdr
+  value: 12.92
+  unit: per_mille
+  geography:
+    level: province
+    name: Hunan
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0058
+  measure: cdr
+  value: 29.26
+  unit: per_mille
+  geography:
+    level: province
+    name: Hunan
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0059
+  measure: cdr
+  value: 17.48
+  unit: per_mille
+  geography:
+    level: province
+    name: Hunan
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0060
+  measure: cdr
+  value: 10.23
+  unit: per_mille
+  geography:
+    level: province
+    name: Hunan
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0061
+  measure: excess_deaths
+  value: 2.49
+  unit: million
+  geography:
+    level: province
+    name: Hunan
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0062
+  measure: excess_deaths
+  value: 1.0
+  unit: million
+  geography:
+    level: province
+    name: Hunan
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0063
+  measure: cdr
+  value: 11.98
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangxi
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0064
+  measure: cdr
+  value: 17.33
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangxi
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0065
+  measure: cdr
+  value: 29.2
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangxi
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0066
+  measure: cdr
+  value: 20.37
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangxi
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0067
+  measure: cdr
+  value: 10.15
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangxi
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0068
+  measure: excess_deaths
+  value: 0.93
+  unit: million
+  geography:
+    level: province
+    name: Guangxi
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0069
+  measure: excess_deaths
+  value: 0.65
+  unit: million
+  geography:
+    level: province
+    name: Guangxi
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0070
+  measure: cdr
+  value: 21.11
+  unit: per_mille
+  geography:
+    level: province
+    name: Gansu
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0071
+  measure: cdr
+  value: 17.38
+  unit: per_mille
+  geography:
+    level: province
+    name: Gansu
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0072
+  measure: cdr
+  value: 41.32
+  unit: per_mille
+  geography:
+    level: province
+    name: Gansu
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0073
+  measure: cdr
+  value: 11.48
+  unit: per_mille
+  geography:
+    level: province
+    name: Gansu
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0074
+  measure: cdr
+  value: 8.25
+  unit: per_mille
+  geography:
+    level: province
+    name: Gansu
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0075
+  measure: excess_deaths
+  value: 1.02
+  unit: million
+  geography:
+    level: province
+    name: Gansu
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0076
+  measure: excess_deaths
+  value: 0.59
+  unit: million
+  geography:
+    level: province
+    name: Gansu
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0077
+  measure: cdr
+  value: 9.4
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangsu
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0078
+  measure: cdr
+  value: 14.55
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangsu
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0079
+  measure: cdr
+  value: 18.41
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangsu
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0080
+  measure: cdr
+  value: 13.35
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangsu
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0081
+  measure: cdr
+  value: 10.36
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangsu
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0082
+  measure: excess_deaths
+  value: 1.53
+  unit: million
+  geography:
+    level: province
+    name: Jiangsu
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0083
+  measure: excess_deaths
+  value: 0.49
+  unit: million
+  geography:
+    level: province
+    name: Jiangsu
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0084
+  measure: cdr
+  value: 9.6
+  unit: per_mille
+  geography:
+    level: province
+    name: Hubei
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0085
+  measure: cdr
+  value: 14.49
+  unit: per_mille
+  geography:
+    level: province
+    name: Hubei
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0086
+  measure: cdr
+  value: 21.22
+  unit: per_mille
+  geography:
+    level: province
+    name: Hubei
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0087
+  measure: cdr
+  value: 9.08
+  unit: per_mille
+  geography:
+    level: province
+    name: Hubei
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0088
+  measure: cdr
+  value: 8.77
+  unit: per_mille
+  geography:
+    level: province
+    name: Hubei
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0089
+  measure: excess_deaths
+  value: 0.68
+  unit: million
+  geography:
+    level: province
+    name: Hubei
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0090
+  measure: excess_deaths
+  value: 0.48
+  unit: million
+  geography:
+    level: province
+    name: Hubei
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0091
+  measure: cdr
+  value: 8.8
+  unit: per_mille
+  geography:
+    level: province
+    name: Liaoning
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0092
+  measure: cdr
+  value: 11.8
+  unit: per_mille
+  geography:
+    level: province
+    name: Liaoning
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0093
+  measure: cdr
+  value: 11.5
+  unit: per_mille
+  geography:
+    level: province
+    name: Liaoning
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0094
+  measure: cdr
+  value: 17.5
+  unit: per_mille
+  geography:
+    level: province
+    name: Liaoning
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0095
+  measure: cdr
+  value: 8.5
+  unit: per_mille
+  geography:
+    level: province
+    name: Liaoning
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0096
+  measure: excess_deaths
+  value: 0.46
+  unit: million
+  geography:
+    level: province
+    name: Liaoning
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0097
+  measure: cdr
+  value: 21.62
+  unit: per_mille
+  geography:
+    level: province
+    name: Yunnan
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0098
+  measure: cdr
+  value: 17.96
+  unit: per_mille
+  geography:
+    level: province
+    name: Yunnan
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0099
+  measure: cdr
+  value: 26.26
+  unit: per_mille
+  geography:
+    level: province
+    name: Yunnan
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0100
+  measure: cdr
+  value: 11.84
+  unit: per_mille
+  geography:
+    level: province
+    name: Yunnan
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0101
+  measure: cdr
+  value: 10.86
+  unit: per_mille
+  geography:
+    level: province
+    name: Yunnan
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0102
+  measure: excess_deaths
+  value: 0.8
+  unit: million
+  geography:
+    level: province
+    name: Yunnan
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0103
+  measure: excess_deaths
+  value: 0.36
+  unit: million
+  geography:
+    level: province
+    name: Yunnan
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0104
+  measure: cdr
+  value: 9.15
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangdong
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0105
+  measure: cdr
+  value: 11.76
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangdong
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0106
+  measure: cdr
+  value: 15.09
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangdong
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0107
+  measure: cdr
+  value: 10.67
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangdong
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0108
+  measure: cdr
+  value: 9.32
+  unit: per_mille
+  geography:
+    level: province
+    name: Guangdong
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0109
+  measure: excess_deaths
+  value: 0.66
+  unit: million
+  geography:
+    level: province
+    name: Guangdong
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0110
+  measure: excess_deaths
+  value: 0.28
+  unit: million
+  geography:
+    level: province
+    name: Guangdong
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0111
+  measure: cdr
+  value: 9.12
+  unit: per_mille
+  geography:
+    level: province
+    name: Jilin
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0112
+  measure: cdr
+  value: 13.43
+  unit: per_mille
+  geography:
+    level: province
+    name: Jilin
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0113
+  measure: cdr
+  value: 10.13
+  unit: per_mille
+  geography:
+    level: province
+    name: Jilin
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0114
+  measure: cdr
+  value: 11.12
+  unit: per_mille
+  geography:
+    level: province
+    name: Jilin
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0115
+  measure: cdr
+  value: 9.96
+  unit: per_mille
+  geography:
+    level: province
+    name: Jilin
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0116
+  measure: excess_deaths
+  value: 0.17
+  unit: million
+  geography:
+    level: province
+    name: Jilin
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0117
+  measure: cdr
+  value: 7.5
+  unit: per_mille
+  geography:
+    level: province
+    name: Fujian
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0118
+  measure: cdr
+  value: 7.95
+  unit: per_mille
+  geography:
+    level: province
+    name: Fujian
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0119
+  measure: cdr
+  value: 15.61
+  unit: per_mille
+  geography:
+    level: province
+    name: Fujian
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0120
+  measure: cdr
+  value: 12.18
+  unit: per_mille
+  geography:
+    level: province
+    name: Fujian
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0121
+  measure: cdr
+  value: 8.28
+  unit: per_mille
+  geography:
+    level: province
+    name: Fujian
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0122
+  measure: excess_deaths
+  value: 0.16
+  unit: million
+  geography:
+    level: province
+    name: Fujian
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0123
+  measure: cdr
+  value: 10.92
+  unit: per_mille
+  geography:
+    level: province
+    name: Hebei
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0124
+  measure: cdr
+  value: 12.31
+  unit: per_mille
+  geography:
+    level: province
+    name: Hebei
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0125
+  measure: cdr
+  value: 12.19
+  unit: per_mille
+  geography:
+    level: province
+    name: Hebei
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0126
+  measure: cdr
+  value: 13.34
+  unit: per_mille
+  geography:
+    level: province
+    name: Hebei
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0127
+  measure: cdr
+  value: 8.97
+  unit: per_mille
+  geography:
+    level: province
+    name: Hebei
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0128
+  measure: excess_deaths
+  value: 0.61
+  unit: million
+  geography:
+    level: province
+    name: Hebei
+  period:
+    start: 1959
+    end: 1961
+    label: 1959-61
+  source: EST-CAO-2005
+  method_class: local_records
+  status: registered
+  added_in: v1.0
+- id: CLM-0129
+  measure: excess_deaths
+  value: 0.14
+  unit: million
+  geography:
+    level: province
+    name: Hebei
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0130
+  measure: cdr
+  value: 9.15
+  unit: per_mille
+  geography:
+    level: province
+    name: Zhejiang
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0131
+  measure: cdr
+  value: 10.81
+  unit: per_mille
+  geography:
+    level: province
+    name: Zhejiang
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0132
+  measure: cdr
+  value: 11.88
+  unit: per_mille
+  geography:
+    level: province
+    name: Zhejiang
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0133
+  measure: cdr
+  value: 9.84
+  unit: per_mille
+  geography:
+    level: province
+    name: Zhejiang
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0134
+  measure: cdr
+  value: 8.61
+  unit: per_mille
+  geography:
+    level: province
+    name: Zhejiang
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0135
+  measure: excess_deaths
+  value: 0.11
+  unit: million
+  geography:
+    level: province
+    name: Zhejiang
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0136
+  measure: cdr
+  value: 11.04
+  unit: per_mille
+  geography:
+    level: province
+    name: Shaanxi
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0137
+  measure: cdr
+  value: 12.76
+  unit: per_mille
+  geography:
+    level: province
+    name: Shaanxi
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0138
+  measure: cdr
+  value: 12.27
+  unit: per_mille
+  geography:
+    level: province
+    name: Shaanxi
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0139
+  measure: cdr
+  value: 8.76
+  unit: per_mille
+  geography:
+    level: province
+    name: Shaanxi
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0140
+  measure: cdr
+  value: 9.35
+  unit: per_mille
+  geography:
+    level: province
+    name: Shaanxi
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0141
+  measure: excess_deaths
+  value: 0.11
+  unit: million
+  geography:
+    level: province
+    name: Shaanxi
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0142
+  measure: cdr
+  value: 11.33
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangxi
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0143
+  measure: cdr
+  value: 13.01
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangxi
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0144
+  measure: cdr
+  value: 16.06
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangxi
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0145
+  measure: cdr
+  value: 11.54
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangxi
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0146
+  measure: cdr
+  value: 11.0
+  unit: per_mille
+  geography:
+    level: province
+    name: Jiangxi
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0147
+  measure: excess_deaths
+  value: 0.1
+  unit: million
+  geography:
+    level: province
+    name: Jiangxi
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0148
+  measure: cdr
+  value: 12.64
+  unit: per_mille
+  geography:
+    level: province
+    name: Qinghai
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0149
+  measure: cdr
+  value: 16.29
+  unit: per_mille
+  geography:
+    level: province
+    name: Qinghai
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0150
+  measure: cdr
+  value: 40.73
+  unit: per_mille
+  geography:
+    level: province
+    name: Qinghai
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0151
+  measure: cdr
+  value: 11.68
+  unit: per_mille
+  geography:
+    level: province
+    name: Qinghai
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0152
+  measure: cdr
+  value: 5.35
+  unit: per_mille
+  geography:
+    level: province
+    name: Qinghai
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0153
+  measure: excess_deaths
+  value: 0.1
+  unit: million
+  geography:
+    level: province
+    name: Qinghai
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0154
+  measure: cdr
+  value: 9.17
+  unit: per_mille
+  geography:
+    level: province
+    name: Heilongjiang
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0155
+  measure: cdr
+  value: 12.76
+  unit: per_mille
+  geography:
+    level: province
+    name: Heilongjiang
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0156
+  measure: cdr
+  value: 10.52
+  unit: per_mille
+  geography:
+    level: province
+    name: Heilongjiang
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0157
+  measure: cdr
+  value: 11.12
+  unit: per_mille
+  geography:
+    level: province
+    name: Heilongjiang
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0158
+  measure: cdr
+  value: 8.62
+  unit: per_mille
+  geography:
+    level: province
+    name: Heilongjiang
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0159
+  measure: excess_deaths
+  value: 0.06
+  unit: million
+  geography:
+    level: province
+    name: Heilongjiang
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0160
+  measure: cdr
+  value: 11.73
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanxi
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0161
+  measure: cdr
+  value: 12.84
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanxi
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0162
+  measure: cdr
+  value: 14.21
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanxi
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0163
+  measure: cdr
+  value: 12.2
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanxi
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0164
+  measure: cdr
+  value: 11.34
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanxi
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0165
+  measure: excess_deaths
+  value: 0.05
+  unit: million
+  geography:
+    level: province
+    name: Shanxi
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0166
+  measure: cdr
+  value: 8.08
+  unit: per_mille
+  geography:
+    level: province
+    name: Beijing
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0167
+  measure: cdr
+  value: 9.66
+  unit: per_mille
+  geography:
+    level: province
+    name: Beijing
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0168
+  measure: cdr
+  value: 9.14
+  unit: per_mille
+  geography:
+    level: province
+    name: Beijing
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0169
+  measure: cdr
+  value: 10.8
+  unit: per_mille
+  geography:
+    level: province
+    name: Beijing
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0170
+  measure: cdr
+  value: 8.77
+  unit: per_mille
+  geography:
+    level: province
+    name: Beijing
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0171
+  measure: excess_deaths
+  value: 0.05
+  unit: million
+  geography:
+    level: province
+    name: Beijing
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0172
+  measure: cdr
+  value: 6.2
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanghai
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0173
+  measure: cdr
+  value: 7.8
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanghai
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0174
+  measure: cdr
+  value: 6.9
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanghai
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0175
+  measure: cdr
+  value: 7.7
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanghai
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0176
+  measure: cdr
+  value: 7.2
+  unit: per_mille
+  geography:
+    level: province
+    name: Shanghai
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0177
+  measure: excess_deaths
+  value: 0.04
+  unit: million
+  geography:
+    level: province
+    name: Shanghai
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0178
+  measure: cdr
+  value: 13.0
+  unit: per_mille
+  geography:
+    level: province
+    name: Xinjiang
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0179
+  measure: cdr
+  value: 18.84
+  unit: per_mille
+  geography:
+    level: province
+    name: Xinjiang
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0180
+  measure: cdr
+  value: 15.67
+  unit: per_mille
+  geography:
+    level: province
+    name: Xinjiang
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0181
+  measure: cdr
+  value: 11.71
+  unit: per_mille
+  geography:
+    level: province
+    name: Xinjiang
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0182
+  measure: cdr
+  value: 9.71
+  unit: per_mille
+  geography:
+    level: province
+    name: Xinjiang
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0183
+  measure: excess_deaths
+  value: 0.04
+  unit: million
+  geography:
+    level: province
+    name: Xinjiang
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0184
+  measure: cdr
+  value: 14.1
+  unit: per_mille
+  geography:
+    level: province
+    name: Ningxia
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0185
+  measure: cdr
+  value: 15.81
+  unit: per_mille
+  geography:
+    level: province
+    name: Ningxia
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0186
+  measure: cdr
+  value: 13.88
+  unit: per_mille
+  geography:
+    level: province
+    name: Ningxia
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0187
+  measure: cdr
+  value: 10.71
+  unit: per_mille
+  geography:
+    level: province
+    name: Ningxia
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0188
+  measure: cdr
+  value: 8.49
+  unit: per_mille
+  geography:
+    level: province
+    name: Ningxia
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0189
+  measure: excess_deaths
+  value: 0.02
+  unit: million
+  geography:
+    level: province
+    name: Ningxia
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0190
+  measure: cdr
+  value: 7.9
+  unit: per_mille
+  geography:
+    level: province
+    name: Inner Mongolia
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0191
+  measure: cdr
+  value: 11.0
+  unit: per_mille
+  geography:
+    level: province
+    name: Inner Mongolia
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0192
+  measure: cdr
+  value: 9.4
+  unit: per_mille
+  geography:
+    level: province
+    name: Inner Mongolia
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0193
+  measure: cdr
+  value: 8.8
+  unit: per_mille
+  geography:
+    level: province
+    name: Inner Mongolia
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0194
+  measure: cdr
+  value: 9.0
+  unit: per_mille
+  geography:
+    level: province
+    name: Inner Mongolia
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0195
+  measure: excess_deaths
+  value: 0.02
+  unit: million
+  geography:
+    level: province
+    name: Inner Mongolia
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0196
+  measure: cdr
+  value: 8.66
+  unit: per_mille
+  geography:
+    level: province
+    name: Tianjin
+  period:
+    start: 1958
+    end: 1958
+    label: '1958'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0197
+  measure: cdr
+  value: 9.88
+  unit: per_mille
+  geography:
+    level: province
+    name: Tianjin
+  period:
+    start: 1959
+    end: 1959
+    label: '1959'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0198
+  measure: cdr
+  value: 10.34
+  unit: per_mille
+  geography:
+    level: province
+    name: Tianjin
+  period:
+    start: 1960
+    end: 1960
+    label: '1960'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0199
+  measure: cdr
+  value: 9.89
+  unit: per_mille
+  geography:
+    level: province
+    name: Tianjin
+  period:
+    start: 1961
+    end: 1961
+    label: '1961'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0200
+  measure: cdr
+  value: 7.36
+  unit: per_mille
+  geography:
+    level: province
+    name: Tianjin
+  period:
+    start: 1962
+    end: 1962
+    label: '1962'
+  source: SRC-SSB-PROVINCIAL-CDR
+  method_class: registration
+  status: registered
+  added_in: v1.0
+- id: CLM-0201
+  measure: excess_deaths
+  value: 0.02
+  unit: million
+  geography:
+    level: province
+    name: Tianjin
+  period:
+    start: 1958
+    end: 1962
+    label: 1958-62
+  source: EST-OFFICIAL-REG
+  method_class: registration
+  note: 'simple excess: (CDR - 1956-57 mean) x population, positive years'
+  status: registered
+  added_in: v1.0
+- id: CLM-0202
+  measure: total_deaths
+  value: 436882.0
+  unit: person
+  geography:
+    level: prefecture
+    name: Xinyang prefecture
+    province: Henan
+  period:
+    start: null
+    end: null
+    label: 1960 (to June)
+  source: https://www.aisixiang.com/data/71783.html
+  first_source: Report of CCP General Office & Henan Provincial Committee work team, 1960-06-18
+  method_class: archival
+  status: registered
+  added_in: v1.0
+- id: CLM-0203
+  measure: total_deaths
+  value: 549171.0
+  unit: person
+  geography:
+    level: prefecture
+    name: Xinyang prefecture
+    province: Henan
+  period:
+    start: null
+    end: null
+    label: to Nov 1960
+  source: https://www.aisixiang.com/data/71783.html
+  first_source: Henan Provincial Committee report, Nov 1960
+  method_class: archival
+  status: registered
+  added_in: v1.0
+- id: CLM-0204
+  measure: abnormal_deaths
+  value: 1070321.0
+  unit: person
+  geography:
+    level: prefecture
+    name: Xinyang prefecture
+    province: Henan
+  period:
+    start: null
+    end: null
+    label: 1959-11 to 1960-10
+  source: https://chinadigitaltimes.net/chinese/215281.html
+  first_source: prefecture's last statistical report to central govt (per Yang/repost)
+  method_class: archival
+  status: registered
+  added_in: v1.0

@@ -1,0 +1,11 @@
+# Thresholds for starting an automated research cycle (pipeline/research_packet.py).
+# A cycle is due when ANY threshold is met, or when a maintainer starts it by hand.
+research_cycle:
+  min_new_submissions: 3          # accepted (merged) submissions since the last report
+  min_open_queue_items: 5         # open items in research/queue.yaml (reconciliation conflicts etc.)
+  min_accepted_questions: 3       # questions with status 'accepted' (not yet answered)
+  max_items_per_cycle: 25         # cap so one cycle stays reviewable
+reconciliation:
+  tolerance: 0.15                 # relative difference treated as agreement
+review:
+  headline_change_approvals: 2    # approvals the "Report approvals" check requires on report/headline PRs

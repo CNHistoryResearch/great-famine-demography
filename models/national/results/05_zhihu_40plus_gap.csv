@@ -1,0 +1,18 @@
+variant,projected_40plus_1964,census_40plus_1964,gap,e0_female_1957_normal,e0_female_1963_normal
+"V1 scaled to 582.6, WPP normal mx",171.91,158.94,12.97,50.4,53.87
+"V2 (missing males 18-35), WPP normal",172.04,158.94,13.1,50.4,53.87
+"V3 unscaled 567.4, WPP normal",167.44,158.94,8.49,50.4,53.87
+"V4 scaled to NBS 594.35, WPP normal",175.38,158.94,16.43,50.4,53.87
+"V1, normal mx x0.85",178.72,158.94,19.78,53.89,57.14
+"V1, normal mx x0.70",186.2,158.94,27.26,57.91,60.9
+"V1, normal mx x0.55 (~registration-level, e0~?)",194.49,158.94,35.54,62.74,65.4
+"V4, normal mx x0.55",198.41,158.94,39.46,62.74,65.4
+"V1, ages50+ overstated 1yr",174.07,158.94,15.12,50.4,53.87
+"V1, WPP2024 actual mx (with famine)",167.49,158.94,8.55,50.4,53.87
+"V2 WPP-normal, 1964 ages 11-19",131.58,130.17,1.41,,
+"V2 WPP-normal, 1964 ages 20-29",103.29,101.93,1.36,,
+"V2 WPP-normal, 1964 ages 30-39",90.39,88.5,1.89,,
+"V2 WPP-normal, 1964 ages 40-49",71.88,66.97,4.91,,
+"V2 WPP-normal, 1964 ages 50-59",52.48,49.42,3.06,,
+"V2 WPP-normal, 1964 ages 60-69",32.25,29.51,2.74,,
+"V2 WPP-normal, 1964 ages 70-85",15.43,13.04,2.39,,

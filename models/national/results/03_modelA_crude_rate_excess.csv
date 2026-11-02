@@ -1,0 +1,19 @@
+series,baseline,excess_1958_61,excess_1959_61,excess_1958_62
+Official NBS (registered),B1 flat 1957,15.33,14.55,14.81
+Official NBS (registered),B2 mean 1956-57,14.53,13.96,13.81
+Official NBS (registered),B3 linear 1957->1963,16.17,15.31,16.07
+Official NBS (registered),B4 OLS trend 1954-57 & 1963-65,14.35,14.03,13.94
+Official NBS (registered),B5 mean 1957 & 1963-64,15.38,14.59,14.87
+UN WPP2024,B1 flat 1957,12.51,12.99,10.29
+UN WPP2024,B2 mean 1956-57,11.97,12.58,9.6
+UN WPP2024,B3 linear 1957->1963,15.74,15.89,15.15
+UN WPP2024,B4 OLS trend 1954-57 & 1963-65,15.73,15.91,15.18
+UN WPP2024,B5 mean 1957 & 1963-64,18.15,17.23,17.36
+UN WPP2022,B1 flat 1957,12.63,13.11,10.39
+UN WPP2022,B2 mean 1956-57,12.09,12.71,9.72
+UN WPP2022,B3 linear 1957->1963,15.73,15.91,15.08
+UN WPP2022,B4 OLS trend 1954-57 & 1963-65,15.81,16.0,15.24
+UN WPP2022,B5 mean 1957 & 1963-64,18.1,17.23,17.27
+Hill 1988 reconstruction (FY),B1 flat FY1957,20.5,17.05,17.83
+Hill 1988 reconstruction (FY),B3 linear FY1957->FY1962,25.7,21.73,25.7
+Hill 1988 reconstruction (FY),B4 OLS trend FY1953-57 & 62-63,23.34,19.89,22.62

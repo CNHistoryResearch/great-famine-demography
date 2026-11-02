@@ -1,0 +1,15 @@
+author,year_pub,period,excess_deaths_m,lost_births_m,method,source
+Ashton Hill Piazza Zeitz,1984,1958-61,30 ("almost 30 million premature deaths"),33 (Hill 1988 text: "some 33 million lost or postponed births"),"census 1953/64/82 + 1982 1-per-1000 fertility survey births; intercensal survival; adult registration completeness ~80.5%",https://catalog.ihsn.org/citations/46705 ; Hill 1988 WB DP22
+Hill (reconstruction table),1988,FY1953-64,intercensal deaths 156.875 total,,"P53+B-P64 with survey births, adjusted 1964 pop 696.4M",https://documents1.worldbank.org/curated/en/492811468771874832/pdf/Demographic-Trends-in-China-from-1950-to-1982.pdf
+Coale,1984,1958-63,26.8 (often rounded 27),,"three censuses + 1982 fertility survey; reconstructed births/deaths vs linear trend",IUSSP paper (iussp.org event_call_for_papers 'A study of population change led by China's great famine'); Cao Shuji 2005 via CDT
+Coale,1984,1959-61,24.81,30.683,same,IUSSP paper (as above)
+Banister,1987,1958-61,29.871,,"reconstruction; CDR 1960 = 44.6",IUSSP paper; marxists.org Patnaik 2004 (CDR 44.6)
+Calot,1985,1958-62,28.509,~33.2,revised census-based,IUSSP paper
+Jiang Zhenghua,1986/88,1958-63,17 (16.5-17.9; mean 17.11),,"dynamic parameter model, life tables, census age data",Cao Shuji 2005 (CDT ?p=98017); IUSSP paper
+Peng Xizhe,1987,1958-62,~23 (not verified this session),,provincial official CDR + adjustment,NOT VERIFIED online in this session
+Li Chengrui,1997,famine period,22 (21.58 in IUSSP table),,amended Coale,Cao Shuji 2005; IUSSP paper
+Luo Sheng,1988,1959-63,28.89,,Brass-logit model life tables,IUSSP paper
+Cao Shuji,2005,1959-61,32.458,,prefecture-level reconstruction from gazetteers + censuses; notes NBS rates give ~15M,https://chinadigitaltimes.net/chinese/?p=98017
+Jin Hui,1993,1959-61,>=27.9,,births minus normal deaths + decline,Cao Shuji 2005
+Patnaik,2002/2004,1959-61,11.6,,official CDR critique,https://www.marxists.org/makedonski/tematska/mitovi-antikomunizam/2004/ideoloski-statistiki.htm
+UN WPP2024,2024,1959-61 (computed here),see model D,,UN reconstruction,github.com/PPgp/wpp2024

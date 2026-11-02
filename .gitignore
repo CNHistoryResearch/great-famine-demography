@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+reports/*/report_*.html
+reports/*/pdf/pages_*/
+models/cohort/data/*.rda
+gate.md
+gate.json
+comment.md
+labels.txt
+check.txt
+reports/reconciliation/all_claims.*

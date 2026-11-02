@@ -1,0 +1,13 @@
+# pipeline
+pyyaml>=6.0
+jsonschema>=4.18
+referencing>=0.30
+pytest>=7
+# models
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+# report builds (also needs: pandoc, poppler-utils, fonts-noto-cjk; then `python -m playwright install --with-deps chromium`)
+playwright>=1.40
+# optional, for models/cohort (reads UN WPP .rda files)
+pyreadr>=0.5

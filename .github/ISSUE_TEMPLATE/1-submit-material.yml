@@ -1,0 +1,58 @@
+name: "Submit material (document, gazetteer, article, archive record) / 提交资料"
+description: A document or publication that contains evidence — e.g. a county gazetteer page, internal report, article, or archived web page.
+title: "[Material] "
+labels: ["submission:material"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Issues are public.** Do not include your real name, contact details, or anything that identifies living private persons.
+        **议题是公开的。** 请勿填写真实姓名、联系方式或任何可识别在世私人的信息。
+        Each submission is checked automatically (gates G0–G3, see docs/quality-gates.md) and then by a maintainer.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary / 内容摘要
+      description: What is it and what does it show? 2–6 sentences. 这是什么资料，说明了什么？
+    validations: {required: true}
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources / 来源
+      description: |
+        One per line: `citation | URL | page`. Include an archive link (web.archive.org / archive.ph) if you have one; we will try to create one.
+        每行一条：`引用 | 网址 | 页码`。
+      placeholder: "《某某县志》(1990) | https://example.org/... | p. 112"
+    validations: {required: true}
+  - type: input
+    id: original_publication
+    attributes:
+      label: Original publication / 最初出处
+      description: Where and when did this first appear, if known? 已知的话，最早在哪里、何时发表？
+  - type: textarea
+    id: claims
+    attributes:
+      label: Numbers it states (optional) / 资料中的数字（可选）
+      description: |
+        One per line: `measure | value | unit | level | place | province | period | quote or page`.
+        measure: excess_deaths, abnormal_deaths (非正常死亡), starvation_deaths (饿死), total_deaths, population_change, lost_births, cdr.
+        unit: person, million, per_mille. level: national, province, prefecture, county, commune.
+      placeholder: "starvation_deaths | 37000 | person | county | Gaoyou | Jiangsu | 1959-61 | p. 85"
+  - type: dropdown
+    id: license
+    attributes:
+      label: License or permission / 授权
+      options: ["Quotation only (we link, quote briefly) / 仅引用", "Public domain / 公有领域", "CC-BY-4.0", "CC0-1.0", "Permission granted by rights holder / 已获授权", "Unknown / 不清楚"]
+    validations: {required: true}
+  - type: input
+    id: language
+    attributes: {label: Language / 语言, placeholder: "zh / en"}
+  - type: checkboxes
+    id: attribution
+    attributes:
+      label: Attribution / 署名
+      options:
+        - label: "Credit me as anonymous in the repository / 在仓库中匿名署名"
+  - type: markdown
+    attributes:
+      value: You can drag files (PDF, images) into the Summary box. Attached files are copied into the repository only if the license allows it.

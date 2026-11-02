@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "claim.schema.json",
+  "title": "Numeric claim",
+  "description": "One number asserted by a source, normalized so the reconciliation step can compare like with like.",
+  "type": "object",
+  "required": ["measure", "value", "unit", "geography", "period"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^CLM-[0-9]{4,}$"},
+    "measure": {"enum": ["excess_deaths", "abnormal_deaths", "starvation_deaths", "total_deaths", "population_change", "lost_births", "births", "cdr", "cbr", "imr", "life_expectancy", "population"],
+                "description": "excess_deaths = all deaths above a no-famine counterfactual; abnormal_deaths = 非正常死亡 as reported by a document (definition unknown); starvation_deaths = 饿死 explicitly; total_deaths = all deaths incl. normal."},
+    "value": {"type": "number"},
+    "low": {"type": "number"},
+    "high": {"type": "number"},
+    "unit": {"enum": ["million", "person", "per_mille", "years", "percent"]},
+    "geography": {
+      "type": "object",
+      "required": ["level", "name"],
+      "properties": {
+        "level": {"enum": ["national", "province", "prefecture", "county", "commune", "camp", "city"]},
+        "name": {"type": "string"},
+        "province": {"type": "string"}
+      }
+    },
+    "period": {
+      "type": "object",
+      "required": ["label"],
+      "properties": {"start": {"type": ["integer", "null"]}, "end": {"type": ["integer", "null"]}, "label": {"type": "string"}}
+    },
+    "source": {"type": "string", "description": "EST-*, SRC-*, ARC-*, SUB-* id, a URL, or a repository path"},
+    "first_source": {"type": "string"},
+    "quote": {"type": "string", "maxLength": 400, "description": "Short verbatim excerpt in the original language that states the number"},
+    "page_ref": {"type": "string"},
+    "method_class": {"enum": ["registration", "census_reconstruction", "local_records", "archival", "hukou_accounting", "model_ours", "testimony", "other"]},
+    "status": {"enum": ["registered", "proposed", "superseded", "rejected"]},
+    "added_in": {"type": "string"},
+    "note": {"type": "string"}
+  }
+}

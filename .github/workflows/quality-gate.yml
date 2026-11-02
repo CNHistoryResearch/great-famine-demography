@@ -1,0 +1,45 @@
+# Gates G0-G3 on every pull request. G4 is human review (CODEOWNERS + branch protection).
+# The gate code comes from the base branch, so a pull request cannot change the rules it is judged by.
+# PRs that touch no submissions pass immediately, so this can be a required check.
+name: Quality gate
+on:
+  pull_request:
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0, persist-credentials: false}
+      - name: Use the gate code and schemas from the base branch
+        run: git checkout ${{ github.event.pull_request.base.sha }} -- pipeline schemas
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install pyyaml jsonschema referencing
+      - name: Run gates
+        id: gate
+        run: |
+          set +e
+          python -m pipeline.quality_gate --changed --base ${{ github.event.pull_request.base.sha }} --out gate.md --json gate.json
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          echo "count=$(python -c 'import json;print(len(json.load(open("gate.json"))))')" >> "$GITHUB_OUTPUT"
+      - name: Post gate report
+        if: steps.gate.outputs.count != '0'
+        continue-on-error: true   # read-only token on fork PRs; the job result below is what counts
+        uses: marocchino/sticky-pull-request-comment@v2
+        with: {header: quality-gate, path: gate.md}
+      - name: Label
+        if: steps.gate.outputs.count != '0'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ steps.gate.outputs.status }}" = "0" ]; then add=gate:passed; rm=gate:needs-work; else add=gate:needs-work; rm=gate:passed; fi
+          gh pr edit ${{ github.event.pull_request.number }} --repo "$GITHUB_REPOSITORY" --add-label "$add" --remove-label "$rm"
+      - name: Fail if gates G0-G3 did not pass
+        if: steps.gate.outputs.status != '0'
+        run: |
+          cat gate.md
+          exit 1

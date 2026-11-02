@@ -1,0 +1,19 @@
+name: "Ask a question / 提问"
+description: A question you want the next report to answer.
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questions are triaged automatically (duplicate check, scope) and then accepted or declined by a maintainer.
+        Accepted questions are answered in the next report version. 问题会先自动分拣，再由维护者决定是否采纳；采纳的问题将在下一版报告中回答。
+  - type: textarea
+    id: your_question
+    attributes:
+      label: Your question / 你的问题
+      description: "One specific question, answerable with evidence. 一个具体、可以用证据回答的问题。"
+    validations: {required: true}
+  - type: textarea
+    id: context
+    attributes: {label: Context (optional) / 背景（可选）, description: "Why it matters, or what you have already found."}

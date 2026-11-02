@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the report version you used."
+title: "How many died in China's 1959–61 famine: an open, versioned estimate"
+authors:
+  - name: "Great Famine Demography contributors"
+version: "v1.0"
+date-released: "2026-11-01"
+license: CC-BY-4.0
+keywords: [China, Great Leap Forward, famine, demography, excess mortality, 三年困难时期, 大饥荒]

@@ -1,0 +1,47 @@
+# After submissions are merged: reconcile every claim, then propose the updated reconciliation report and
+# research queue as a pull request (main is protected) and mirror the report into a tracking issue.
+name: Reconcile
+on:
+  push:
+    branches: [main]
+    paths: ["submissions/**", "data/**"]
+  schedule:
+    - cron: "17 4 * * 1"   # weekly, Monday 04:17 UTC
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+concurrency: {group: reconcile, cancel-in-progress: false}
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main, persist-credentials: false}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install pyyaml jsonschema referencing
+      - run: python -m pipeline.reconcile --since "$(ls -d reports/v*/ | sort -V | tail -1 | xargs basename)"
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.BOT_TOKEN || github.token }}
+          branch: bot/reconciliation
+          add-paths: |
+            reports/reconciliation/latest.md
+            reports/reconciliation/latest.json
+            research/queue.yaml
+          commit-message: "Reconciliation report and research queue"
+          title: "Reconciliation: updated report and research queue"
+          body: "Automated output of `pipeline/reconcile.py`. Review the new queue items, then merge."
+          labels: reconciliation
+      - name: Update the reconciliation tracking issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh issue list --label reconciliation --state open --json number -q '.[0].number')
+          if [ -z "$n" ]; then
+            gh issue create --title "Reconciliation queue" --label reconciliation --body-file reports/reconciliation/latest.md
+          else
+            gh issue edit "$n" --body-file reports/reconciliation/latest.md
+          fi

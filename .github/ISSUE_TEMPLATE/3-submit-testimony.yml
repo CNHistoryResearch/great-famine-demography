@@ -1,0 +1,69 @@
+name: "Submit testimony (oral history, memoir, family account) / 提交口述证言"
+description: A first-hand or family account of the famine years. Read the testimony policy first.
+title: "[Testimony] "
+labels: ["submission:testimony"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **This form is public.** Read [docs/testimony-policy.md](../blob/main/docs/testimony-policy.md) first.
+        Do **not** include names of living people, villages, phone numbers, or anything that identifies the narrator or their family.
+        Province and county are enough. If you are unsure, use the safer channel described in the policy.
+        ⚠️ **此表单公开可见。** 请先阅读口述证言政策。不要写在世者姓名、村名、电话或任何可识别讲述者及其家人的信息；写到省、县即可。
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent / 同意
+      options:
+        - label: "The narrator (or their family) agrees to publish this account / 讲述者（或其家人）同意公开此证言"
+          required: true
+        - label: "I removed identifying details of the narrator and of living third parties / 我已删除讲述者及在世第三方的可识别信息"
+          required: true
+  - type: dropdown
+    id: relation
+    attributes:
+      label: Who experienced it? / 谁亲历？
+      options: ["Firsthand: the narrator lived through it / 亲历者本人", "Family: told by a parent or grandparent who lived through it / 家人转述", "Secondhand: heard from others / 间接听闻"]
+    validations: {required: true}
+  - type: input
+    id: birth_decade
+    attributes: {label: Narrator's decade of birth / 讲述者出生年代, placeholder: "1940s"}
+  - type: input
+    id: province
+    attributes: {label: Province / 省}
+    validations: {required: true}
+  - type: input
+    id: county
+    attributes: {label: County (optional) / 县（可选）}
+  - type: input
+    id: period
+    attributes: {label: When / 时间, placeholder: "winter 1959 – spring 1960"}
+    validations: {required: true}
+  - type: textarea
+    id: testimony
+    attributes:
+      label: Testimony / 证言
+      description: "The account itself. Numbers mentioned (deaths in a production team, rations) are especially useful. 证言正文，其中提到的数字（生产队死亡人数、口粮标准）尤其有价值。"
+    validations: {required: true}
+  - type: textarea
+    id: corroboration
+    attributes:
+      label: Corroboration (optional) / 佐证（可选）
+      description: "Gazetteers, documents or other accounts that support it, one per line."
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources / 来源
+      description: "If already published (memoir, video, article), cite it here: `citation | URL`. Otherwise write 'unpublished'."
+    validations: {required: true}
+  - type: dropdown
+    id: license
+    attributes:
+      label: License / 授权
+      options: ["CC-BY-4.0", "CC0-1.0", "Quotation only (we link, quote briefly) / 仅引用"]
+    validations: {required: true}
+  - type: checkboxes
+    id: attribution
+    attributes:
+      label: Attribution / 署名
+      options: [{label: "Credit me as anonymous in the repository / 在仓库中匿名署名"}]

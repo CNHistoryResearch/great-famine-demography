@@ -1,0 +1,31 @@
+province,status_1958_62,cdr_1957,cdr_1958,cdr_1959,cdr_1960,cdr_1961,cdr_1962,cdr_1963,natural_growth_1960_permille,cao2005_excess_deaths_wan,cao2005_pct_prefamine_pop,peng1987_excess_deaths,yang_tombstone_claim,officials_or_other_claims,notes,sources
+Beijing,municipality,,,,,,,,,,<1%,NOT VERIFIED,,,"Chen Shuo: Beijing+Shanghai+Tianjin famine-period avg CDR 7.13 vs 6.96 normal",https://chinadigitaltimes.net/chinese/?p=720876
+Tianjin,"part of Hebei 1958-67 (from memory, unverified)",,,,,,,,,,<1%,NOT VERIFIED,,,see Beijing note,https://chinadigitaltimes.net/chinese/?p=720876
+Hebei,province,,,,,,,,,61,1.10%,NOT VERIFIED,,,"Jin Hui lists Hebei among provinces with 1958-62 population decline",https://chinadigitaltimes.net/chinese/215281.html
+Shanxi,province,,,,,,,,,<50,0.4%,NOT VERIFIED,,,"Shouyang county 349 'non-normal' deaths 1959-60 (Yang)",https://chinadigitaltimes.net/chinese/?p=98017
+Inner Mongolia,autonomous region,,,,,,,,,<50,excluded from Cao avg,NOT VERIFIED,,,,https://chinadigitaltimes.net/chinese/?p=98017
+Liaoning,province,,,,,,,,-0.3 (1961),<50,1.71,NOT VERIFIED,,,"Kung & Chen: excess death rate 2.8 permille vs national 5.81; Chen Shuo: 1960 non-famine death rate 2.23",https://Www.Gwern.net/doc/sociology/abandoned-footnotes/2011-kung.pdf
+Jilin,province,,,,,,,,,<50,<1%,NOT VERIFIED,,,,
+Heilongjiang,province,,,,,,,,,<50,1.21%,NOT VERIFIED,,,,https://chinadigitaltimes.net/chinese/215281.html
+Shanghai,municipality,,,,,,,,,<50,<1%,NOT VERIFIED,,,see Beijing note,https://chinadigitaltimes.net/chinese/?p=720876
+Jiangsu,province,,9.4,,18.4,,,,,153,2.88%,NOT VERIFIED,,,"CDR 1958 9.4 -> 1960 18.4 per Kasahara & Li; Gaoyou county 37000+ starved (Gaoyou xianzhi); Yixing archives",https://conference.nber.org/conf_papers/f100904.pdf
+Zhejiang,province,,,,,,,,,<50,0.5%,NOT VERIFIED,,,"exported 4.50% of 1959 output (Kung & Chen)",https://Www.Gwern.net/doc/sociology/abandoned-footnotes/2011-kung.pdf
+Anhui,province,,12.3,,68.58,,,,-57.23,633,18.37%,NOT VERIFIED,"5-6 million",Wan Li: 3-4 million (via Tian Jiyun ifeng 2013); An Ziwen: 5 million; 'experts': 2.6 million; Becker: 2.3 million,"Net decline 1959-61 4.39M (144.27 permille of 1960 pop) per China Population Yearbook 1985 via Jin Hui; Chen Shuo: 1960 non-famine death rate 56.87 vs 1955-57 avg 11.73",https://chinadigitaltimes.net/chinese/?p=103671
+Fujian,province,,,,,,,,,<50,2.02%,NOT VERIFIED,,,"Ningde county 7706 deaths 1960 (disputed: edema vs total)",https://chinadigitaltimes.net/chinese/215281.html
+Jiangxi,province,,,,,,,,,<50,1.06%,NOT VERIFIED,,,,https://chinadigitaltimes.net/chinese/215281.html
+Shandong,province,,,,23.60,,,,-4.10,181,3.38%,NOT VERIFIED,,"Bo Yibo: 3 million; 'experts': 1.84 million; Gov. Zhao Jianmin: 650000 non-normal deaths winter 1958-H1 1960 + 1.09M outflow","pop 54M (1957) -> ~52M (1960); net decline 1959-60 2.34M (Jin Hui)",https://www.aisixiang.com/data/24241.html
+Henan,province,,,,39.60,,,,-25.59,294,6.12%,NOT VERIFIED,,"Becker (via repost): 7.8 million [suspect]","Net decline 1960-61 2,385,073 (Jin Hui); Xinyang ~1 million alone",https://chinadigitaltimes.net/chinese/?p=103671
+Hubei,province,,,,,,,,-4.78,68,2.20%,NOT VERIFIED,,,,https://chinadigitaltimes.net/chinese/215281.html
+Hunan,province,,,,29.42 [suspect: same value Yang gives for Sichuan 1961],,,,-9.93,249,6.81%,NOT VERIFIED,,,"Net decline 1960-61 1.8397M (Jin Hui)",https://chinadigitaltimes.net/chinese/?p=103671
+Guangdong,"province (incl. Hainan)",,,,,,,,,66,1.71%,NOT VERIFIED,,,"Luoding county 17000+ deaths Jan-Aug 1960",https://chinadigitaltimes.net/chinese/215281.html
+Guangxi,autonomous region,,,,,,,,-10.06,93,4.63%,NOT VERIFIED,,,"Net decline 1960-61 ~1M (Jin Hui); Huanjiang 1960 CDR 131.66",https://chinadigitaltimes.net/chinese/215281.html
+Sichuan,"province (incl. Chongqing)",12,25.17? (Bramall 25-26; Yang speech prints 15.17),46.9 (Bramall 49),53.97,29.42 (Bramall 30),14.82 (Bramall 15),,-42.23,940,13.07%,NOT VERIFIED,"more than 10 million",Liao Bokang: 12 million; 'experts': ~8 million; Becker: 7-9 million,"Chongqing area 15% per en.wikipedia citing Cao; net decline 1958-61 6,218,349; Chen Shuo net loss 11.5M = 38.34% of national; exported 15.5% of 1959 output; 31.5% of provincial grain exports; excess death rate 18.09 permille",https://soas-repository.worktribe.com/OutputFile/406222
+Guizhou,province,,,,52.33,,,,-32.4,175,10.23%,NOT VERIFIED,,"Becker: 1 million","Meitan 1960 CDR 240.16",https://chinadigitaltimes.net/chinese/?p=103671
+Yunnan,province,,,,,,,,-2.07,80,4.19%,NOT VERIFIED,,,,https://chinadigitaltimes.net/chinese/215281.html
+Tibet,region,,,,,,,,,n/a,excluded,NOT VERIFIED,,,"no data in Chinese provincial series",
+Shaanxi,province,,,,,,,,,<50,1.02%,NOT VERIFIED,,,,https://chinadigitaltimes.net/chinese/215281.html
+Gansu,province,,,,41.30,,,,-25.80,102,6.45%,NOT VERIFIED,,"Becker: 1.3 million (also 'at least 690000 starved', same repost)","Tongwei, Jiabiangou; Linxia dispute",https://chinadigitaltimes.net/chinese/?p=103671
+Qinghai,province,,,,40.73,,,,-27.66,<50,<1%? (not in Cao list),NOT VERIFIED,,,"Huangzhong 1960 CDR 138.36",https://chinadigitaltimes.net/chinese/?p=103671
+Ningxia,autonomous region,,,,,,,,,<50,<1%,NOT VERIFIED,,,"ranked 17th in severity (Kung & Chen)",
+Xinjiang,autonomous region,,,,,,,,,n/a,excluded,NOT VERIFIED,,,,
+TOTAL,,,,,,,,,,3245.8 (Cao total; 13 listed provinces = 3095),,"23 million national (Peng)","36 million (Yang); provincial official sum 2098万",NBS-implied 1619.92万,,https://chinadigitaltimes.net/chinese/?p=103671

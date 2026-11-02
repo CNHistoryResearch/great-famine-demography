@@ -1,0 +1,62 @@
+name: Question triage
+on:
+  issues:
+    types: [opened, edited, labeled]
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+jobs:
+  triage:
+    # Suggest a label on new or edited questions until a maintainer has decided.
+    if: >-
+      (github.event.action == 'opened' || github.event.action == 'edited') &&
+      contains(join(github.event.issue.labels.*.name, ','), 'question') &&
+      !contains(join(github.event.issue.labels.*.name, ','), 'question:accepted') &&
+      !contains(join(github.event.issue.labels.*.name, ','), 'question:declined')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install pyyaml jsonschema referencing
+      - run: python -m pipeline.triage_questions triage --event "$GITHUB_EVENT_PATH" --out comment.md --labels labels.txt
+      - name: Comment and label
+        env:
+          GH_TOKEN: ${{ github.token }}
+          N: ${{ github.event.issue.number }}
+        run: |
+          for l in question:candidate question:duplicate question:needs-clarification question:out-of-scope; do
+            gh issue edit "$N" --remove-label "$l" >/dev/null 2>&1 || true
+          done
+          gh issue edit "$N" --add-label "$(cat labels.txt)"
+          gh issue comment "$N" --body-file comment.md
+  accept:
+    # A maintainer applies `question:accepted`: add it to questions/questions.yaml so the next research cycle answers it.
+    if: github.event.action == 'labeled' && github.event.label.name == 'question:accepted'
+    runs-on: ubuntu-latest
+    concurrency: {group: questions-registry, cancel-in-progress: false}
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install pyyaml jsonschema referencing
+      - id: acc
+        run: |
+          qid=$(python -m pipeline.triage_questions accept --event "$GITHUB_EVENT_PATH")
+          test -n "$qid"
+          echo "qid=$qid" >> "$GITHUB_OUTPUT"
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.BOT_TOKEN || github.token }}
+          branch: question/issue-${{ github.event.issue.number }}
+          add-paths: questions/questions.yaml
+          commit-message: "Accept question ${{ steps.acc.outputs.qid }} from #${{ github.event.issue.number }}"
+          title: "Accept question ${{ steps.acc.outputs.qid }} (#${{ github.event.issue.number }})"
+          body: "Adds #${{ github.event.issue.number }} to the question registry as ${{ steps.acc.outputs.qid }}. It will be answered in the next report version."
+          labels: question
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue comment ${{ github.event.issue.number }} --body "Accepted as **${{ steps.acc.outputs.qid }}**. It will be answered in the next report version; this issue stays open until then."

@@ -1,0 +1,11 @@
+census,ref_date,item,persons,source
+1953,1953-06-30 24:00,mainland total (direct+indirect),582603417,1953 census communique; = Hill 1988 Table1 582.6M; Wikipedia 1964 Chinese census page
+1953,1953-06-30 24:00,directly enumerated,574205940,1953 census communique (standard figure; not re-fetched online in this session)
+1953,1953-06-30 24:00,indirectly estimated (remote areas e.g. Tibet),8397477,1953 census communique (582603417-574205940)
+1953,1953-06-30 24:00,"NBS published total (excl. Taiwan, incl. overseas Chinese/students ~11.74M)",594350000,NBS yearbook 2005 Table 4-4 (59435 x10k); = 601938035 - Taiwan 7591298
+1953,1953-06-30 24:00,age-classified population (single-year table),567446758,IDE-JETRO statistical compilation TSS009400_007 (ir.ide.go.jp/record/44763)
+1964,1964-06-30 24:00,mainland 28 prov. + military,694581759,NBS 1964 census communique (stats.gov.cn t20230206_1901987)
+1964,1964-06-30 24:00,grand total incl. Taiwan/HK/Macau/overseas,723070269,NBS 1964 census communique
+1964,1964-06-30 24:00,age-classified population,694581759,IDE-JETRO TSS009400_007
+1982,1982-07-01 00:00,mainland 29 prov. + military,1008175288,"NBS yearbook 2005 Table 4-4 (100818 x10k); Hill 1988 (1,008,175 thousand)"
+1982,1982-07-01 00:00,age-classified (civilian) population,1003913927,IDE-JETRO TSS009400_007

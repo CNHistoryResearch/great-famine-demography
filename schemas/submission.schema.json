@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "submission.schema.json",
+  "title": "Submission manifest (submissions/<type>/<id>/manifest.yaml)",
+  "type": "object",
+  "required": ["id", "type", "title", "submitted_at", "summary", "license", "provenance"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^SUB-[0-9]{4}-[0-9]{4,}$"},
+    "type": {"enum": ["material", "data", "testimony", "research", "correction"]},
+    "title": {"type": "string", "minLength": 5},
+    "issue": {"type": ["integer", "null"], "description": "GitHub issue number the submission came from"},
+    "submitted_by": {"type": "string", "description": "GitHub handle or 'anonymous'. Real names are never required."},
+    "submitted_at": {"type": "string", "format": "date"},
+    "language": {"type": "string"},
+    "summary": {"type": "string", "minLength": 20},
+    "license": {"enum": ["CC-BY-4.0", "CC0-1.0", "public-domain", "quotation-only", "permission-granted", "unknown"]},
+    "provenance": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "citation": {"type": "string"},
+          "url": {"type": "string"},
+          "archive_url": {"type": "string"},
+          "accessed": {"type": "string"},
+          "page_ref": {"type": "string"},
+          "original_publication": {"type": "string", "description": "Where/when the item first appeared, if known"}
+        },
+        "anyOf": [{"required": ["url"]}, {"required": ["citation"]}]
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {"type": "object", "required": ["path", "sha256"],
+                "properties": {"path": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "description": {"type": "string"}}}
+    },
+    "claims": {"type": "array", "items": {"$ref": "claim.schema.json"}},
+    "research": {
+      "type": "object",
+      "properties": {
+        "method": {"type": "string"},
+        "code_url": {"type": "string"},
+        "data_url": {"type": "string"},
+        "reproducible": {"type": "boolean"},
+        "peer_reviewed": {"type": "boolean"},
+        "doi": {"type": "string"}
+      }
+    },
+    "testimony": {
+      "type": "object",
+      "required": ["consent", "narrator", "events"],
+      "properties": {
+        "consent": {"type": "object", "required": ["publish", "anonymized"],
+                    "properties": {"publish": {"const": true}, "anonymized": {"const": true}, "recorded_by_submitter": {"type": "boolean"}}},
+        "narrator": {"type": "object", "required": ["relation"],
+                     "properties": {"relation": {"enum": ["firsthand", "family_firsthand", "secondhand"]},
+                                    "birth_decade": {"type": "string"}, "role": {"type": "string"}}},
+        "events": {"type": "object", "required": ["province", "period"],
+                   "properties": {"province": {"type": "string"}, "county": {"type": "string"}, "period": {"type": "string"}}},
+        "corroborated_by": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "correction": {
+      "type": "object",
+      "properties": {"target": {"type": "string", "description": "Report section, claim id, or file path being corrected"},
+                     "proposed_change": {"type": "string"}}
+    },
+    "attachments_not_copied": {"type": "array", "items": {"type": "string"},
+                               "description": "Issue attachments left on GitHub (testimony, non-redistributable license, size or type)"},
+    "review": {"type": "object", "description": "Written by the pipeline; do not edit by hand"}
+  },
+  "allOf": [
+    {"if": {"properties": {"type": {"const": "testimony"}}}, "then": {"required": ["testimony"]}},
+    {"if": {"properties": {"type": {"const": "research"}}}, "then": {"required": ["research"]}},
+    {"if": {"properties": {"type": {"const": "correction"}}}, "then": {"required": ["correction"]}}
+  ]
+}

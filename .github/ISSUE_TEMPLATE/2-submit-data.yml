@@ -1,0 +1,35 @@
+name: "Submit data (tables, statistics, census or registration figures) / 提交数据"
+description: Numerical data — provincial or county death rates, population counts, registration figures, survey tables.
+title: "[Data] "
+labels: ["submission:data"]
+body:
+  - type: markdown
+    attributes:
+      value: "**Issues are public. 议题是公开的。** Give the exact source of every number so it can be checked."
+  - type: textarea
+    id: summary
+    attributes: {label: Summary / 数据说明, description: "What the data covers (place, years, measure) and why it matters."}
+    validations: {required: true}
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources / 来源
+      description: "One per line: `citation | URL | page/table`."
+    validations: {required: true}
+  - type: textarea
+    id: claims
+    attributes:
+      label: Claims / 数字
+      description: "One per line: `measure | value | unit | level | place | province | period | quote or page`. Or attach a CSV."
+      placeholder: "cdr | 68.58 | per_mille | province | Anhui | | 1960 | 人口统计资料汇编 1988, Table 1"
+  - type: dropdown
+    id: license
+    attributes:
+      label: License or permission / 授权
+      options: ["Public domain / 公有领域", "CC-BY-4.0", "CC0-1.0", "Quotation only (we link, quote briefly) / 仅引用", "Permission granted by rights holder / 已获授权", "Unknown / 不清楚"]
+    validations: {required: true}
+  - type: checkboxes
+    id: attribution
+    attributes:
+      label: Attribution / 署名
+      options: [{label: "Credit me as anonymous in the repository / 在仓库中匿名署名"}]

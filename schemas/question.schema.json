@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "question.schema.json",
+  "title": "Reader question",
+  "type": "object",
+  "required": ["id", "status"],
+  "anyOf": [{"required": ["text_en"]}, {"required": ["text_zh"]}],
+  "properties": {
+    "id": {"type": "string", "pattern": "^Q-[0-9]{4,}$"},
+    "text_en": {"type": "string"},
+    "text_zh": {"type": "string"},
+    "issue": {"type": "integer"},
+    "status": {"enum": ["submitted", "needs_clarification", "accepted", "answered", "deferred", "duplicate", "out_of_scope"]},
+    "duplicate_of": {"type": "string"},
+    "priority": {"enum": ["high", "medium", "low"]},
+    "answered_in": {"type": "string"},
+    "section": {"type": "string"}
+  }
+}

@@ -1,0 +1,30 @@
+# Enforces GOVERNANCE.md: a pull request that adds or changes a report version, or the headline estimate,
+# needs at least two approving reviews. Make "Report approvals / count" a required check.
+name: Report approvals
+on:
+  pull_request:
+  pull_request_review:
+    types: [submitted, dismissed]
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - name: Count approvals when reports or the headline change
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          files=$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR/files" --paginate -q '.[].filename')
+          if ! echo "$files" | grep -Eq '^reports/v[0-9]+\.[0-9]+/(meta\.yaml|report_(en|zh)\.md)$|^data/registry/estimates\.yaml$'; then
+            echo "No report or headline change; nothing to enforce."; exit 0
+          fi
+          need=$(grep -A3 '^review:' pipeline/config.yaml 2>/dev/null | sed -n 's/.*headline_change_approvals: *\([0-9]*\).*/\1/p'); need=${need:-2}
+          have=$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR/reviews" --paginate \
+                 -q '[.[] | select(.state != "COMMENTED")] | group_by(.user.login) | map(sort_by(.submitted_at) | last) | map(select(.state == "APPROVED")) | length')
+          echo "approvals: $have / $need"
+          [ "$have" -ge "$need" ]

@@ -1,0 +1,91 @@
+# Issue form -> submission folder -> pull request.
+# Trusted authors (anyone with a prior merged contribution, members, collaborators) get a PR immediately.
+# First-time contributors get a gate preview; a maintainer adds `submission:triage-ok` to open the PR
+# (this keeps spam and attachment downloads out of the repository).
+# Maintainers who edit the PR by hand should add `submission:locked` to the issue so later issue edits don't overwrite it.
+name: Submission intake
+on:
+  issues:
+    types: [opened, edited, labeled]
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+concurrency:
+  group: intake-${{ github.event.issue.number }}
+  cancel-in-progress: true
+jobs:
+  intake:
+    if: >-
+      github.event.issue.state == 'open' &&
+      contains(join(github.event.issue.labels.*.name, ','), 'submission:') &&
+      !contains(join(github.event.issue.labels.*.name, ','), 'submission:rejected') &&
+      !contains(join(github.event.issue.labels.*.name, ','), 'submission:locked') &&
+      (github.event.action != 'labeled' || startsWith(github.event.label.name, 'submission:'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install pyyaml jsonschema referencing
+      - name: Is the author trusted to get a PR straight away?
+        id: trust
+        env:
+          ASSOC: ${{ github.event.issue.author_association }}
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
+        run: |
+          case "$ASSOC" in OWNER|MEMBER|COLLABORATOR|CONTRIBUTOR) ok=true ;; *) ok=false ;; esac
+          if [[ ",$LABELS," == *",submission:triage-ok,"* ]]; then ok=true; fi
+          echo "ok=$ok" >> "$GITHUB_OUTPUT"
+      - name: Build submission folder from the issue
+        id: build
+        run: |
+          if [ "${{ steps.trust.outputs.ok }}" = "true" ]; then dl=--download; else dl=; fi
+          python -m pipeline.intake_issue --event "$GITHUB_EVENT_PATH" $dl
+      - name: Archive cited URLs (best effort)
+        if: steps.build.outputs.path != '' && steps.trust.outputs.ok == 'true'
+        continue-on-error: true
+        timeout-minutes: 10
+        run: python -m pipeline.archive_links "${{ steps.build.outputs.path }}"
+      - name: Quality gate preview
+        if: steps.build.outputs.path != ''
+        continue-on-error: true
+        run: python -m pipeline.quality_gate "${{ steps.build.outputs.path }}" --out gate.md
+      - name: Open or update the submission pull request
+        id: pr
+        if: steps.build.outputs.path != '' && steps.trust.outputs.ok == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          # A PAT or GitHub App token is needed for CI to run on bot-opened PRs (docs/maintainer-setup.md).
+          token: ${{ secrets.BOT_TOKEN || github.token }}
+          branch: submission/issue-${{ github.event.issue.number }}
+          add-paths: ${{ steps.build.outputs.path }}
+          commit-message: "Submission from #${{ github.event.issue.number }}"
+          title: "Submission #${{ github.event.issue.number }}: ${{ github.event.issue.title }}"
+          body: |
+            Created automatically from #${{ github.event.issue.number }}. Closes #${{ github.event.issue.number }} when merged.
+
+            Maintainers: if you edit `manifest.yaml` here, add the `submission:locked` label to the issue so later
+            edits to the issue don't regenerate this branch. Review against docs/quality-gates.md. Merging = accepting.
+          labels: submission
+      - name: Report back on the issue
+        if: steps.build.outputs.path != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ steps.pr.outputs.pull-request-number }}
+          OK: ${{ steps.trust.outputs.ok }}
+        run: |
+          {
+            if [ "$OK" = "true" ]; then
+              echo "Thanks for the submission. It is now pull request #$PR."
+            else
+              echo "Thanks for the submission. Because this is your first contribution, a maintainer will look at it and add"
+              echo "\`submission:triage-ok\` to open the pull request. Meanwhile, here is the automatic gate preview:"
+            fi
+            echo
+            cat gate.md 2>/dev/null || true
+            echo
+            echo "If a gate failed, edit this issue and the check runs again."
+          } > comment.md
+          gh issue comment ${{ github.event.issue.number }} --body-file comment.md

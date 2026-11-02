@@ -1,0 +1,13 @@
+year,pop_end_10k,cbr,cdr,source
+1971,85230,30.6,7.3,"Statistical Yearbook of China 1983 via Hill 1988 WB DP22 Table 1 (pop 852.3M OCR-flagged)"
+1972,87180,29.8,7.6,"SYB1983 via Hill 1988 Table 1"
+1973,89210,27.9,7.0,"SYB1983 via Hill 1988 Table 1"
+1974,90860,24.8,7.3,"SYB1983 via Hill 1988 Table 1"
+1975,92420,23.0,7.3,"SYB1983 via Hill 1988 Table 1"
+1976,93720,19.9,7.2,"SYB1983 via Hill 1988 Table 1"
+1977,94970,18.9,6.9,"SYB1983 via Hill 1988 Table 1"
+1978,96260,18.2,6.2,"SYB1983 via Hill 1988 Table 1"
+1979,97540,17.8,6.2,"SYB1983 via Hill 1988 Table 1"
+1980,98710,18.2,6.3,"pop SYB1983 via Hill; CBR/CDR illegible in Hill scan -> NBS standard values 18.21/6.34 from memory, NOT re-verified this session"
+1981,100070,20.9,6.4,"SYB1983 via Hill 1988 Table 1"
+1982,101540,21.1,6.6,"SYB1983 via Hill 1988 Table 1 (later NBS revisions: CBR 22.28, pop 101654)"

@@ -1,0 +1,58 @@
+# When a new report version lands on main, build PDFs and page images and publish a GitHub release.
+name: Release report
+on:
+  push:
+    branches: [main]
+    paths: ["reports/v*/meta.yaml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: |
+          sudo apt-get update && sudo apt-get install -y pandoc poppler-utils fonts-noto-cjk zip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Build
+        run: |
+          V=$(ls -d reports/v*/ | sort -V | tail -1 | xargs basename)
+          echo "V=$V" >> "$GITHUB_ENV"
+          if gh release view "report-$V" >/dev/null 2>&1; then echo "exists=1" >> "$GITHUB_ENV"; exit 0; fi
+          [ -f "reports/$V/pdf/report_en.pdf" ] || python -m pipeline.build_report "$V"
+          for l in en zh; do
+            mkdir -p "pages_$l" && pdftoppm -r 150 -png "reports/$V/pdf/report_$l.pdf" "pages_$l/report_$l"
+            zip -qj "report_${V}_${l}_pages.zip" pages_$l/*.png
+          done
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Publish release
+        if: env.exists != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "report-$V" --title "Report $V" --notes-file "reports/$V/CHANGES.md" \
+            "reports/$V/pdf/report_en.pdf#Report $V (English, PDF)" \
+            "reports/$V/pdf/report_zh.pdf#报告 $V（中文，PDF）" \
+            "report_${V}_en_pages.zip#English pages (PNG)" "report_${V}_zh_pages.zip#中文页面图片 (PNG)"
+      - name: Close answered question issues
+        if: env.exists != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > answered.txt
+          import yaml
+          qs = yaml.safe_load(open("questions/questions.yaml"))["questions"]
+          import os
+          for q in qs:
+              if q.get("status") == "answered" and q.get("answered_in") == os.environ["V"] and q.get("issue"):
+                  print(q["issue"], q["id"], q.get("section", ""))
+          PY
+          while read -r n qid sec; do
+            gh issue close "$n" --comment "Answered in report $V ($qid, section: $sec). See the release report-$V." || true
+          done < answered.txt

@@ -1,0 +1,7 @@
+# Replace @MAINTAINER with real GitHub handles (see docs/maintainer-setup.md).
+*                       @MAINTAINER
+/reports/               @MAINTAINER
+/data/registry/         @MAINTAINER
+/models/                @MAINTAINER
+/docs/testimony-policy.md @MAINTAINER
+/GOVERNANCE.md          @MAINTAINER

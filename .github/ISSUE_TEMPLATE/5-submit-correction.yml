@@ -1,0 +1,27 @@
+name: "Report an error / 报告错误"
+description: Something in the report, data or registry is wrong.
+title: "[Correction] "
+labels: ["submission:correction"]
+body:
+  - type: input
+    id: target
+    attributes: {label: What should change / 需要更正的内容, description: "Report section, claim id (CLM-…), table row, or file path."}
+    validations: {required: true}
+  - type: textarea
+    id: proposed
+    attributes: {label: Proposed correction / 建议更正}
+    validations: {required: true}
+  - type: textarea
+    id: summary
+    attributes: {label: Why / 理由, description: "Explain the error and the evidence."}
+    validations: {required: true}
+  - type: textarea
+    id: sources
+    attributes: {label: Sources / 来源, description: "`citation | URL | page`, one per line."}
+    validations: {required: true}
+  - type: dropdown
+    id: license
+    attributes:
+      label: License / 授权
+      options: ["Quotation only (we link, quote briefly) / 仅引用", "Public domain / 公有领域", "CC-BY-4.0"]
+    validations: {required: true}

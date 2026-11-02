@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the current report / 阅读当前报告
+    url: https://github.com/OWNER/REPO/tree/main/reports
+    about: Check whether your question is already answered. 请先查看问题是否已有答案。
+  - name: Sensitive testimony or safety concern / 敏感口述或安全顾虑
+    url: https://github.com/OWNER/REPO/blob/main/docs/testimony-policy.md#submitting-safely
+    about: Issues are public. Read this before posting anything that could identify you or others. 议题是公开的，提交前请先阅读。
