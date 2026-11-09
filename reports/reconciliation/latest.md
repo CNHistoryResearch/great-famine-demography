@@ -1,4 +1,4 @@
-# Reconciliation report (2026-11-02)
+# Reconciliation report (2026-11-09)
 
 Against report v1.0; model band 22–40 million excess deaths; tolerance ±15%.
 
